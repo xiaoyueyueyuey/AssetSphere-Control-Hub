@@ -46,7 +46,6 @@ logging:
   pattern:
     console: "%date requestId:%X{${xyboot.traceRequestIdKey}} %thread %green(%level) [%cyan(%logger{10}):%magenta(%line)] %red(%method) | %msg%n"
 
-
 # Spring配置
 spring:
   # 资源信息
@@ -68,6 +67,7 @@ spring:
     restart:
       # 热部署开关  线上记得关闭
       enabled: true
+      exclude: application.yml,static/**,public/**
   # compatible with swagger
   mvc:
     pathmatch:

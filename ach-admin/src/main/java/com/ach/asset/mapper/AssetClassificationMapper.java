@@ -1,7 +1,8 @@
 package com.ach.asset.mapper;
 
-import com.ach.asset.entity.AssetClassification;
+import com.ach.asset.entity.AssetClassificationEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author xy
  * @since 2024-06-08
  */
-public interface AssetClassificationMapper extends BaseMapper<AssetClassification> {
+@Mapper
+public interface AssetClassificationMapper extends BaseMapper<AssetClassificationEntity> {
 
 }

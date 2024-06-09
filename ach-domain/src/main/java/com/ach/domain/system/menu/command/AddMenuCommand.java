@@ -1,7 +1,7 @@
 package com.ach.domain.system.menu.command;
 
 
-import com.ach.domain.system.Command;
+import com.ach.domain.Command;
 import com.ach.domain.system.menu.dto.MetaDTO;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -24,10 +24,8 @@ public class AddMenuCommand implements Command {
 
     @Size(max = 200, message = "路由地址不能超过200个字符")
     private String path;
-
     private Integer status;
     private Integer menuType;
-
     private Boolean isButton;
     @Size(max = 100, message = "权限标识长度不能超过100个字符")
     private String permission;

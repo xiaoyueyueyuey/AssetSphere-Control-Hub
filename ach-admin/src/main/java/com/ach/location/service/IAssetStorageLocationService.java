@@ -1,7 +1,10 @@
 package com.ach.location.service;
 
-import com.ach.location.entity.AssetStorageLocation;
+import com.ach.location.entity.AssetStorageLocationEntity;
+import com.ach.location.vo.LocationVO;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -11,6 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author xy
  * @since 2024-06-08
  */
-public interface IAssetStorageLocationService extends IService<AssetStorageLocation> {
+public interface IAssetStorageLocationService extends IService<AssetStorageLocationEntity> {
 
+    List<LocationVO> getLocationList();
 }

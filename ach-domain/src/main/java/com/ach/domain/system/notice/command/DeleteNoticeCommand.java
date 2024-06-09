@@ -1,7 +1,7 @@
 package com.ach.domain.system.notice.command;
 
 
-import com.ach.domain.system.Command;
+import com.ach.domain.Command;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import lombok.Data;

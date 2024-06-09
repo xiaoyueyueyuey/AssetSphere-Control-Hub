@@ -1,6 +1,6 @@
 package com.ach.asset.service;
 
-import com.ach.asset.entity.AssetReceiptRecord;
+import com.ach.asset.entity.AssetReceiptRecordEntity;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author xy
  * @since 2024-06-08
  */
-public interface IAssetReceiptRecordService extends IService<AssetReceiptRecord> {
+public interface IAssetReceiptRecordService extends IService<AssetReceiptRecordEntity> {
 
 }

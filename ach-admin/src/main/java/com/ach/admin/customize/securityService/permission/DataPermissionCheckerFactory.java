@@ -4,7 +4,7 @@ package com.ach.admin.customize.securityService.permission;
 import cn.hutool.extra.spring.SpringUtil;
 import com.ach.admin.customize.securityService.permission.model.AbstractDataPermissionChecker;
 import com.ach.admin.customize.securityService.permission.model.checker.*;
-import com.ach.admin.query.service.SysDeptService;
+import com.ach.admin.service.SysDeptService;
 import com.ach.infrastructure.user.web.DataScopeEnum;
 import com.ach.infrastructure.user.web.SystemLoginUser;
 import jakarta.annotation.PostConstruct;

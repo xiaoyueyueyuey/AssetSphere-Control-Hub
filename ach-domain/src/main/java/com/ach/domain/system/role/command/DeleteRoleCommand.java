@@ -1,7 +1,7 @@
 package com.ach.domain.system.role.command;
 
 
-import com.ach.domain.system.Command;
+import com.ach.domain.Command;
 import lombok.Data;
 
 @Data

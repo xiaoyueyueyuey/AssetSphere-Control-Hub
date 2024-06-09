@@ -1,7 +1,10 @@
 package com.ach.audit.mapper;
 
-import com.ach.audit.entity.AssetRepairAudit;
+import com.ach.audit.entity.AssetRepairAuditEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
 
 /**
  * <p>
@@ -11,6 +14,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author xy
  * @since 2024-06-08
  */
-public interface AssetRepairAuditMapper extends BaseMapper<AssetRepairAudit> {
+public interface AssetRepairAuditMapper extends BaseMapper<AssetRepairAuditEntity> {
 
 }

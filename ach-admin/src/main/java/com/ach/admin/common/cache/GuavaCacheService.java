@@ -2,8 +2,8 @@ package com.ach.admin.common.cache;
 
 
 import com.ach.admin.entity.SysDeptEntity;
-import com.ach.admin.query.service.SysConfigService;
-import com.ach.admin.query.service.SysDeptService;
+import com.ach.admin.service.SysConfigService;
+import com.ach.admin.service.SysDeptService;
 import com.ach.infrastructure.cache.guava.AbstractGuavaCacheTemplate;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

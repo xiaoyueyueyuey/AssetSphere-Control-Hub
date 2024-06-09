@@ -7,7 +7,7 @@ import com.ach.admin.dto.monitor.OnlineUserDTO;
 import com.ach.admin.dto.monitor.RedisCacheInfoDTO;
 import com.ach.admin.dto.monitor.SearchDTO;
 import com.ach.admin.dto.monitor.ServerInfo;
-import com.ach.admin.query.service.impl.MonitorServiceImpl;
+import com.ach.admin.service.impl.MonitorServiceImpl;
 import com.ach.common.base.BaseResponseData;
 import com.ach.common.enums.common.BusinessTypeEnum;
 import com.ach.infrastructure.base.BaseController;

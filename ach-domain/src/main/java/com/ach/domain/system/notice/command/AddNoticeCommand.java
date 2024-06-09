@@ -1,7 +1,7 @@
 package com.ach.domain.system.notice.command;
 
 
-import com.ach.domain.system.Command;
+import com.ach.domain.Command;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.StringDeserializer;
 import jakarta.validation.constraints.NotBlank;

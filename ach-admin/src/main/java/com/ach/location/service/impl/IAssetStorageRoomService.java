@@ -1,6 +1,10 @@
 package com.ach.location.service.impl;
 
-import com.ach.location.entity.AssetStorageRoom;
+
+import com.ach.infrastructure.page.PageCustomDTO;
+import com.ach.location.entity.AssetStorageRoomEntity;
+import com.ach.location.query.RoomQuery;
+import com.ach.location.vo.RoomVO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author xy
  * @since 2024-06-08
  */
-public interface IAssetStorageRoomService extends IService<AssetStorageRoom> {
+public interface IAssetStorageRoomService extends IService<AssetStorageRoomEntity> {
 
+    PageCustomDTO<RoomVO> getRoomNav(RoomQuery query);
 }

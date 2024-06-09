@@ -1,7 +1,7 @@
 package com.ach.domain.system.user.command.user;
 
 
-import com.ach.domain.system.Command;
+import com.ach.domain.Command;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

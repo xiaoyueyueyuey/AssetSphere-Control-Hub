@@ -1,6 +1,6 @@
 package com.ach.asset.service.impl;
 
-import com.ach.asset.entity.AssetReceiptRecord;
+import com.ach.asset.entity.AssetReceiptRecordEntity;
 import com.ach.asset.mapper.AssetReceiptRecordMapper;
 import com.ach.asset.service.IAssetReceiptRecordService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2024-06-08
  */
 @Service
-public class AssetReceiptRecordServiceImpl extends ServiceImpl<AssetReceiptRecordMapper, AssetReceiptRecord> implements IAssetReceiptRecordService {
+public class AssetReceiptRecordServiceImpl extends ServiceImpl<AssetReceiptRecordMapper, AssetReceiptRecordEntity> implements IAssetReceiptRecordService {
 
 }

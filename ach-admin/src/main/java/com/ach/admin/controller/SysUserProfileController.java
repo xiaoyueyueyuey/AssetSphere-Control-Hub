@@ -3,9 +3,9 @@ package com.ach.admin.controller;
 
 import com.ach.admin.common.dto.common.UploadFileDTO;
 import com.ach.admin.customize.aop.accessLog.AccessLog;
-import com.ach.admin.domain.common.CommandInvoker;
+import com.ach.domain.CommandInvoker;
 import com.ach.admin.dto.user.UserProfileDTO;
-import com.ach.admin.query.service.SysUserService;
+import com.ach.admin.service.SysUserService;
 import com.ach.common.base.BaseResponseData;
 import com.ach.common.constant.Constants;
 import com.ach.common.enums.common.BusinessTypeEnum;

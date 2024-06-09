@@ -1,6 +1,6 @@
 package com.ach.audit.service.impl;
 
-import com.ach.audit.entity.AssetProcurementAudit;
+import com.ach.audit.entity.AssetProcurementAuditEntity;
 import com.ach.audit.mapper.AssetProcurementAuditMapper;
 import com.ach.audit.service.IAssetProcurementAuditService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2024-06-08
  */
 @Service
-public class AssetProcurementAuditServiceImpl extends ServiceImpl<AssetProcurementAuditMapper, AssetProcurementAudit> implements IAssetProcurementAuditService {
+public class AssetProcurementAuditServiceImpl extends ServiceImpl<AssetProcurementAuditMapper, AssetProcurementAuditEntity> implements IAssetProcurementAuditService {
 
 }

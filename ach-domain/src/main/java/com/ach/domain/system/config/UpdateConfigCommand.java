@@ -1,7 +1,7 @@
 package com.ach.domain.system.config;
 
 
-import com.ach.domain.system.Command;
+import com.ach.domain.Command;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

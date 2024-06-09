@@ -3,7 +3,7 @@ package com.ach.admin.customize.securityService.permission.model.checker;
 
 import com.ach.admin.customize.securityService.permission.model.AbstractDataPermissionChecker;
 import com.ach.admin.customize.securityService.permission.model.DataCondition;
-import com.ach.admin.query.service.SysDeptService;
+import com.ach.admin.service.SysDeptService;
 import com.ach.infrastructure.user.web.SystemLoginUser;
 import lombok.AllArgsConstructor;
 import lombok.Data;

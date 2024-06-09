@@ -5,7 +5,7 @@ import cn.hutool.core.collection.CollUtil;
 import com.ach.admin.customize.securityService.permission.model.AbstractDataPermissionChecker;
 import com.ach.admin.customize.securityService.permission.model.DataCondition;
 import com.ach.admin.entity.SysUserEntity;
-import com.ach.admin.query.service.SysUserService;
+import com.ach.admin.service.SysUserService;
 import com.ach.infrastructure.user.AuthenticationUtils;
 import com.ach.infrastructure.user.web.SystemLoginUser;
 import lombok.RequiredArgsConstructor;

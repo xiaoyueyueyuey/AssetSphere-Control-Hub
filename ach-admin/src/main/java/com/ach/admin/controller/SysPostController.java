@@ -2,11 +2,11 @@ package com.ach.admin.controller;
 
 
 import com.ach.admin.customize.aop.accessLog.AccessLog;
-import com.ach.admin.domain.common.CommandInvoker;
+import com.ach.domain.CommandInvoker;
 import com.ach.admin.dto.post.PostDTO;
 import com.ach.admin.entity.SysPostEntity;
 import com.ach.admin.query.PostQuery;
-import com.ach.admin.query.service.SysPostService;
+import com.ach.admin.service.SysPostService;
 import com.ach.common.base.BaseResponseData;
 import com.ach.common.enums.common.BusinessTypeEnum;
 import com.ach.domain.system.post.command.AddPostCommand;

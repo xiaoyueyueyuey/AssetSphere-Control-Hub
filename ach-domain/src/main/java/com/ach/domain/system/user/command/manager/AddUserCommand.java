@@ -2,7 +2,7 @@ package com.ach.domain.system.user.command.manager;
 
 
 import com.ach.common.annotation.excel.ExcelColumn;
-import com.ach.domain.system.Command;
+import com.ach.domain.Command;
 import lombok.Data;
 
 /**

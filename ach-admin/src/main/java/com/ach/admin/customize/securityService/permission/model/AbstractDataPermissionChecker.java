@@ -1,7 +1,7 @@
 package com.ach.admin.customize.securityService.permission.model;
 
 
-import com.ach.admin.query.service.SysDeptService;
+import com.ach.admin.service.SysDeptService;
 import com.ach.infrastructure.user.web.SystemLoginUser;
 import lombok.Data;
 

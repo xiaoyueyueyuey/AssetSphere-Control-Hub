@@ -3,12 +3,12 @@ package com.ach.admin.controller;
 
 import cn.hutool.core.collection.ListUtil;
 import com.ach.admin.customize.aop.accessLog.AccessLog;
-import com.ach.admin.domain.common.CommandInvoker;
+import com.ach.domain.CommandInvoker;
 import com.ach.admin.dto.user.SearchUserDO;
 import com.ach.admin.dto.user.UserDTO;
 import com.ach.admin.dto.user.UserDetailDTO;
 import com.ach.admin.query.SearchUserQuery;
-import com.ach.admin.query.service.SysUserService;
+import com.ach.admin.service.SysUserService;
 import com.ach.common.base.BaseResponseData;
 import com.ach.common.enums.common.BusinessTypeEnum;
 import com.ach.domain.system.user.command.manager.*;

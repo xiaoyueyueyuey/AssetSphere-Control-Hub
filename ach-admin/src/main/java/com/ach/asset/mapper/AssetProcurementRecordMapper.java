@@ -1,7 +1,9 @@
 package com.ach.asset.mapper;
 
-import com.ach.asset.entity.AssetProcurementRecord;
+
+import com.ach.asset.entity.AssetProcurementRecordEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -11,6 +13,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author xy
  * @since 2024-06-08
  */
-public interface AssetProcurementRecordMapper extends BaseMapper<AssetProcurementRecord> {
+@Mapper
+
+public interface AssetProcurementRecordMapper extends BaseMapper<AssetProcurementRecordEntity> {
 
 }

@@ -23,7 +23,7 @@ public class UpdateMenuCommandHandler implements CommandHandler<UpdateMenuComman
         //判断名字是否修改了
         if (!menuModel.getMenuName().equals(command.getMenuName())) {
             Boolean hasMenuName = menuRepository.findByMenuNameOrError(command.getMenuName(), command.getMenuId());
-            menuModel.setMenuNameIsUnique(hasMenuName);
+            menuModel.setMenuNameIsUnique(!hasMenuName);
         }
         //处理命令
         Boolean handle = menuModel.handle(eventQueue, command);

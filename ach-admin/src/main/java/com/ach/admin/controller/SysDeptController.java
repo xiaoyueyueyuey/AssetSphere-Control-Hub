@@ -3,11 +3,11 @@ package com.ach.admin.controller;
 
 import cn.hutool.core.lang.tree.Tree;
 import com.ach.admin.customize.aop.accessLog.AccessLog;
-import com.ach.admin.domain.common.CommandInvoker;
+import com.ach.domain.CommandInvoker;
 import com.ach.admin.dto.dept.DeptDTO;
 import com.ach.admin.entity.SysDeptEntity;
 import com.ach.admin.query.DeptQuery;
-import com.ach.admin.query.service.SysDeptService;
+import com.ach.admin.service.SysDeptService;
 import com.ach.common.base.BaseResponseData;
 import com.ach.common.enums.common.BusinessTypeEnum;
 import com.ach.domain.system.dept.command.AddDeptCommand;

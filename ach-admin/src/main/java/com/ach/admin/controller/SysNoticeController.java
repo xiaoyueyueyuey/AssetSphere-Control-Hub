@@ -2,11 +2,11 @@ package com.ach.admin.controller;
 
 
 import com.ach.admin.customize.aop.accessLog.AccessLog;
-import com.ach.admin.domain.common.CommandInvoker;
+import com.ach.domain.CommandInvoker;
 import com.ach.admin.dto.notice.NoticeDTO;
 import com.ach.admin.entity.SysNoticeEntity;
 import com.ach.admin.query.NoticeQuery;
-import com.ach.admin.query.service.SysNoticeService;
+import com.ach.admin.service.SysNoticeService;
 import com.ach.common.base.BaseResponseData;
 import com.ach.common.enums.common.BusinessTypeEnum;
 import com.ach.domain.system.notice.command.AddNoticeCommand;

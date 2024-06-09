@@ -1,6 +1,6 @@
 package com.ach.audit.service;
 
-import com.ach.audit.entity.AssetRepairAudit;
+import com.ach.audit.entity.AssetRepairAuditEntity;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author xy
  * @since 2024-06-08
  */
-public interface IAssetRepairAuditService extends IService<AssetRepairAudit> {
+public interface IAssetRepairAuditService extends IService<AssetRepairAuditEntity> {
 
 }

@@ -182,6 +182,18 @@ public enum ErrorCode implements ErrorCodeInterface {
         NOTICE_TYPE_IS_NOT_EXIST(11102, "公告类型不存在"),
         NOTICE_STATUS_IS_NOT_EXIST(11103, "公告状态不存在"),
 
+        // ---------------------------------- ROOM -----------------------------------------------
+
+        ROOM_NAME_IS_NOT_UNIQUE(11201, "房间名称：{}, 已存在"),
+
+        ROOM_IS_NOT_EXIST(11202, "房间不存在"),
+
+        ROOM_HAS_ASSET_NOT_ALLOW_DELETE(11203, "房间存在资产不允许删除"),
+
+        // ---------------------------------- LOCATION -----------------------------------------------
+
+        LOCATION_NAME_IS_NOT_UNIQUE(11301, "教学楼名称：{}, 已存在"),
+        LOCATION_IS_NOT_EXIST(11302, "教学楼不存在"),
         // ---------------------------------- USER -----------------------------------------------
 
         USER_NON_EXIST(10501, "登录用户：{} 不存在"),

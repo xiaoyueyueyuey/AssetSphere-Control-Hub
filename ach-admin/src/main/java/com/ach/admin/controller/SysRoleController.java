@@ -2,14 +2,14 @@ package com.ach.admin.controller;
 
 
 import com.ach.admin.customize.aop.accessLog.AccessLog;
-import com.ach.admin.domain.common.CommandInvoker;
+import com.ach.domain.CommandInvoker;
 import com.ach.admin.dto.role.RoleDTO;
 import com.ach.admin.dto.user.UserDTO;
 import com.ach.admin.entity.SysRoleEntity;
 import com.ach.admin.query.AllocatedRoleQuery;
 import com.ach.admin.query.RoleQuery;
 import com.ach.admin.query.UnallocatedRoleQuery;
-import com.ach.admin.query.service.SysRoleService;
+import com.ach.admin.service.SysRoleService;
 import com.ach.common.base.BaseResponseData;
 import com.ach.common.enums.common.BusinessTypeEnum;
 import com.ach.domain.system.role.command.*;

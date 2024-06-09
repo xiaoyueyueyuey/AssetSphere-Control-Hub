@@ -42,7 +42,6 @@ public class GlobalExceptionInterceptor {
         log.error("请求地址'{}',不支持'{}'请求", request.getRequestURI(), e.getMethod());
         return BaseResponseData.fail(new ApiException(ErrorCode.Client.COMMON_REQUEST_METHOD_INVALID, e.getMethod()));
     }
-
     /**
      * 业务异常
      */

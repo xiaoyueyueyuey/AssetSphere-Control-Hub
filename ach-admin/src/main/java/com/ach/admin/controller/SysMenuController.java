@@ -3,11 +3,11 @@ package com.ach.admin.controller;
 
 import cn.hutool.core.lang.tree.Tree;
 import com.ach.admin.customize.aop.accessLog.AccessLog;
-import com.ach.admin.domain.common.CommandInvoker;
+import com.ach.domain.CommandInvoker;
 import com.ach.admin.dto.menu.MenuDTO;
 import com.ach.admin.dto.menu.MenuDetailDTO;
 import com.ach.admin.query.MenuQuery;
-import com.ach.admin.query.service.SysMenuService;
+import com.ach.admin.service.SysMenuService;
 import com.ach.common.base.BaseResponseData;
 import com.ach.common.enums.common.BusinessTypeEnum;
 import com.ach.domain.system.menu.command.AddMenuCommand;
@@ -25,6 +25,7 @@ import jakarta.annotation.Resource;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -41,6 +42,7 @@ import java.util.List;
 @RequestMapping("/system/menus")
 @Validated
 @RequiredArgsConstructor
+@Slf4j
 public class SysMenuController extends BaseController {
 
     @Resource
@@ -71,7 +73,7 @@ public class SysMenuController extends BaseController {
     @Operation(summary = "菜单详情")
     @PreAuthorize("@permission.has('system:menu:query')")
     @GetMapping(value = "/{menuId}")
-    public BaseResponseData<MenuDetailDTO> menuInfo(@PathVariable @NotNull @PositiveOrZero Long menuId) {
+    public BaseResponseData<MenuDetailDTO> menuInfo(@PathVariable("menuId") @NotNull @PositiveOrZero Long menuId) {
         MenuDetailDTO menu = sysMenuService.getMenuInfo(menuId);
         return BaseResponseData.ok(menu);
     }
@@ -98,13 +100,13 @@ public class SysMenuController extends BaseController {
     @AccessLog(title = "菜单管理", businessType = BusinessTypeEnum.ADD)
     @PostMapping
     public BaseResponseData<Void> add(@RequestBody AddMenuCommand addCommand) {
+        log.info("添加菜单，addCommand:{}", addCommand);
         Boolean invoke = commandInvoker.execute(addMenuCommandHandler, addCommand);
         if (!invoke) {
             return BaseResponseData.fail();
         }
         return BaseResponseData.ok();
     }
-
     /**
      * 修改菜单
      */
@@ -113,6 +115,7 @@ public class SysMenuController extends BaseController {
     @AccessLog(title = "菜单管理", businessType = BusinessTypeEnum.MODIFY)
     @PutMapping("/{menuId}")
     public BaseResponseData<Void> edit(@PathVariable("menuId") Long menuId, @RequestBody UpdateMenuCommand updateCommand) {
+        log.info("编辑菜单，menuId:{}", menuId);
         updateCommand.setMenuId(menuId);
         Boolean invoke = commandInvoker.execute(updateMenuCommandHandler, updateCommand);
 
@@ -130,6 +133,7 @@ public class SysMenuController extends BaseController {
     @AccessLog(title = "菜单管理", businessType = BusinessTypeEnum.DELETE)
     @DeleteMapping("/{menuId}")
     public BaseResponseData<Void> remove(@PathVariable("menuId") Long menuId) {
+        log.info("删除菜单，menuId:{}", menuId);
         Boolean execute = commandInvoker.execute(deleteMenuCommandHandler, new DeleteMenuCommand(menuId));
         if (!execute) {
             return BaseResponseData.fail();

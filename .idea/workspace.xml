@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0139cf2-a7fc-42f7-8c62-6a210ca3f2b5" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/AssetProcurementRecordEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/entity/AssetLendingAuditEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/entity/AssetProcurementAuditEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/domain/repository/RoomRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/domain/serviceImpl/RoomServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/materialize/RoomMaterialize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/query/RoomQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/vo/LocationVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/vo/RoomVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/RoomModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/RoomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/RoomService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/command/AddRoomCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/command/ChangeRoomStatusCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/command/DeleteRoomCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/command/UpdateRoomCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/event/RoomAddEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/event/RoomDeleteEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/event/RoomStatusChangeEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/event/RoomUpdateEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/handler/AddRoomCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/handler/ChangeRoomStatusCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/handler/DeleteRoomCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/handler/UpdateRoomCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/CodeGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/common/cache/GuavaCacheService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/common/cache/GuavaCacheService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/common/cache/RedisCacheService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/common/cache/RedisCacheService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/MonitorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/MonitorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysConfigController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysDeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysDeptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysLogsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysLogsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysNoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysNoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysUserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/controller/SysUserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/async/AsyncTaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/async/AsyncTaskFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/DataPermissionCheckerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/DataPermissionCheckerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/DataPermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/DataPermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/AbstractDataPermissionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/AbstractDataPermissionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/AllDataPermissionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/AllDataPermissionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/CustomDataPermissionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/CustomDataPermissionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/DefaultDataPermissionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/DefaultDataPermissionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/DeptTreeDataPermissionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/DeptTreeDataPermissionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/OnlySelfDataPermissionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/OnlySelfDataPermissionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/SingleDeptDataPermissionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/customize/securityService/permission/model/checker/SingleDeptDataPermissionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/domain/common/CommandInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/domain/CommandInvoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/domain/common/DomainEventDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/domain/DomainEventDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/domain/common/OneTransactionCommandInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/domain/OneTransactionCommandInvoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/domain/common/SimpleEventQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/domain/SimpleEventQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/domain/common/SyncDomainEventDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/domain/SyncDomainEventDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/LoginMaterialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/materialize/LoginMaterialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/SysConfigMaterialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/materialize/SysConfigMaterialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/SysDeptMaterialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/materialize/SysDeptMaterialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/SysLoginInfoMaterialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/materialize/SysLoginInfoMaterialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/SysMenuMaterialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/materialize/SysMenuMaterialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/SysNoticeMaterialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/materialize/SysNoticeMaterialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/SysOperationLogMaterialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/materialize/SysOperationLogMaterialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/SysPostMaterialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/materialize/SysPostMaterialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/SysRoleMaterialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/materialize/SysRoleMaterialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/SysUserMaterialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/materialize/SysUserMaterialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/SysUserProfileMaterialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/materialize/SysUserProfileMaterialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/SysConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/SysConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/SysDeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/SysDeptService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/SysLoginInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/SysLoginInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/SysMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/SysMenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/SysNoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/SysNoticeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/SysOperationLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/SysOperationLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/SysPostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/SysPostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/SysRoleMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/SysRoleMenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/SysRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/SysRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/SysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/impl/MonitorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/impl/MonitorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/impl/SysConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/impl/SysConfigServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/impl/SysDeptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/impl/SysDeptServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/impl/SysLoginInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/impl/SysLoginInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/impl/SysMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/impl/SysMenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/impl/SysNoticeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/impl/SysNoticeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/impl/SysOperationLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/impl/SysOperationLogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/impl/SysPostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/impl/SysPostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/impl/SysRoleMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/impl/SysRoleMenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/impl/SysRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/impl/SysRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/AssetEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/AssetClassification.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/AssetClassificationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/AssetLendingRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/AssetLendingRecordEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/AssetProcurementRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/AssetReceiptRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/AssetReceiptRecordEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/AssetRepairRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/entity/AssetRepairRecordEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetClassificationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetClassificationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetLendingRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetLendingRecordMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetProcurementRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetProcurementRecordMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetReceiptRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetReceiptRecordMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetRepairRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/mapper/AssetRepairRecordMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetClassificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetClassificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetLendingRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetLendingRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetProcurementRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetProcurementRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetReceiptRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetReceiptRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetRepairRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetRepairRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/IAssetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetClassificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetClassificationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetLendingRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetLendingRecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetProcurementRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetProcurementRecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetReceiptRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetReceiptRecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetRepairRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetRepairRecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/asset/service/impl/AssetServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/entity/AssetLendingAudit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/entity/AssetProcurementAudit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/entity/AssetReceiptAudit.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/entity/AssetReceiptAuditEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/entity/AssetRepairAudit.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/entity/AssetRepairAuditEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/mapper/AssetLendingAuditMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/mapper/AssetLendingAuditMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/mapper/AssetProcurementAuditMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/mapper/AssetProcurementAuditMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/mapper/AssetReceiptAuditMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/mapper/AssetReceiptAuditMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/mapper/AssetRepairAuditMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/mapper/AssetRepairAuditMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/IAssetLendingAuditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/IAssetLendingAuditService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/IAssetProcurementAuditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/IAssetProcurementAuditService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/IAssetReceiptAuditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/IAssetReceiptAuditService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/IAssetRepairAuditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/IAssetRepairAuditService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/impl/AssetLendingAuditServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/impl/AssetLendingAuditServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/impl/AssetProcurementAuditServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/impl/AssetProcurementAuditServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/impl/AssetReceiptAuditServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/impl/AssetReceiptAuditServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/impl/AssetRepairAuditServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/audit/service/impl/AssetRepairAuditServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/controller/AssetStorageLocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/controller/AssetStorageLocationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/controller/AssetStorageRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/controller/AssetStorageRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/entity/AssetStorageLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/entity/AssetStorageLocationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/entity/AssetStorageRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/entity/AssetStorageRoomEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/mapper/AssetStorageLocationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/mapper/AssetStorageLocationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/mapper/AssetStorageRoomMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/mapper/AssetStorageRoomMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/service/IAssetStorageLocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/service/IAssetStorageLocationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/service/impl/AssetStorageLocationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/service/impl/AssetStorageLocationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/service/impl/AssetStorageRoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/service/impl/AssetStorageRoomServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/service/impl/IAssetStorageRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/java/com/ach/location/service/impl/IAssetStorageRoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-admin/src/main/resources/mapper/asset/AssetStorageLocationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ach-admin/src/main/resources/mapper/asset/AssetStorageLocationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-common/src/main/java/com/ach/common/exception/error/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-common/src/main/java/com/ach/common/exception/error/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/CommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/config/UpdateConfigCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/config/UpdateConfigCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/dept/command/AddDeptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/dept/command/AddDeptCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/dept/command/DeleteDeptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/dept/command/DeleteDeptCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/log/login/command/AddLoginLogCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/log/login/command/AddLoginLogCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/log/login/command/DeleteLoginLogCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/log/login/command/DeleteLoginLogCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/log/operation/command/AddOperationLogCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/log/operation/command/AddOperationLogCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/log/operation/command/DeleteOperationLogCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/log/operation/command/DeleteOperationLogCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/menu/MenuModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/menu/MenuModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/menu/command/AddMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/menu/command/AddMenuCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/menu/command/DeleteMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/menu/command/DeleteMenuCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/menu/handler/AddMenuCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/menu/handler/AddMenuCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/menu/handler/UpdateMenuCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/menu/handler/UpdateMenuCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/notice/command/AddNoticeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/notice/command/AddNoticeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/notice/command/DeleteNoticeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/notice/command/DeleteNoticeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/post/command/AddPostCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/post/command/AddPostCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/post/command/DeletePostCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/post/command/DeletePostCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/role/command/AddRoleCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/role/command/AddRoleCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/role/command/DeleteRoleCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/role/command/DeleteRoleCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/role/command/UpdateRoleDataScopeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/role/command/UpdateRoleDataScopeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/role/command/UpdateRoleStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/role/command/UpdateRoleStatusCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/manager/AddUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/manager/AddUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/manager/ChangeStatusCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/manager/ChangeStatusCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/manager/DeleteUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/manager/DeleteUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/manager/ResetPasswordCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/manager/ResetPasswordCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/manager/UpdateUserLoginIpAndTimeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/manager/UpdateUserLoginIpAndTimeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/user/UpdateUserAvatarCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/user/UpdateUserAvatarCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/user/UpdateUserPasswordCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/user/UpdateUserPasswordCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/user/UpdateUserProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/user/command/user/UpdateUserProfileCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/userLogin/command/UserLoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/userLogin/command/UserLoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ach-infrastructure/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-infrastructure/src/main/java/com/ach/infrastructure/exception/GlobalExceptionInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ach-infrastructure/src/main/java/com/ach/infrastructure/exception/GlobalExceptionInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ach-infrastructure/src/main/resources/application-basic.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ach-infrastructure/src/main/resources/application-basic.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\javaSoftWare\apache-maven-3.9.6\repository" />
+        <option name="userSettingsFile" value="C:\javaSoftWare\apache-maven-3.9.6\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2hYD9v7NF8W6A3CVR6xuxtpFEu7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/Xyue/Desktop/AssetSphere-Control-Hub/ach-domain/src/main/java/com/ach/domain/common",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "ts.external.directory.path": "C:\\Users\\Xyue\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate 3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ach.admin.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Xyue\Desktop\AssetSphere-Control-Hub\ach-domain\src\main\java\com\ach\domain\common" />
+      <recent name="C:\Users\Xyue\Desktop\AssetSphere-Control-Hub\ach-domain\src\main\java\com\ach\domain" />
+      <recent name="C:\Users\Xyue\Desktop\AssetSphere-Control-Hub\ach-admin\src\main\resources\mapper\asset" />
+      <recent name="C:\Users\Xyue\Desktop\AssetSphere-Control-Hub\ach-admin\src\main\java\com\ach\audit" />
+      <recent name="C:\Users\Xyue\Desktop\AssetSphere-Control-Hub\ach-admin\src\main\java\com\ach\asset\service\impl" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.ach.admin.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AdminApplication">
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ach.CodeGenerator" />
+      <module name="ach-admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ach.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ach-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ach.AdminApplication" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ach.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.AdminApplication" />
+      <item itemvalue="应用程序.CodeGenerator" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.AdminApplication" />
+        <item itemvalue="应用程序.CodeGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootHealthEndpointTabSettings">
+    <option name="healthCheckDelay" value="5000" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="b0139cf2-a7fc-42f7-8c62-6a210ca3f2b5" name="更改" comment="" />
+      <created>1717761970045</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717761970045</updated>
+      <workItem from="1717761971191" duration="5425000" />
+      <workItem from="1717815327213" duration="6638000" />
+      <workItem from="1717830011784" duration="71000" />
+      <workItem from="1717844031231" duration="4897000" />
+      <workItem from="1717848957153" duration="5141000" />
+      <workItem from="1717856875849" duration="464000" />
+      <workItem from="1717904739072" duration="184000" />
+      <workItem from="1717917200462" duration="17295000" />
+    </task>
+    <task id="LOCAL-00001" summary="build: mybatisPlus生成代码初始化">
+      <option name="closed" value="true" />
+      <created>1717829106592</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717829106592</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="build: mybatisPlus生成代码初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="build: mybatisPlus生成代码初始化" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/system/menu/handler/UpdateMenuCommandHandler.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ach-domain/src/main/java/com/ach/domain/location/room/handler/AddRoomCommandHandler.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ach-admin/src/main/java/com/ach/admin/query/MenuQuery.java</url>
+          <line>22</line>
+          <properties class="com.ach.admin.query.MenuQuery" method="addQueryCondition">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

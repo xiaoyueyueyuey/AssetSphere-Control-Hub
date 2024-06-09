@@ -2,7 +2,7 @@ package com.ach.domain.system.role.command;
 
 
 import com.ach.common.annotation.excel.ExcelColumn;
-import com.ach.domain.system.Command;
+import com.ach.domain.Command;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;

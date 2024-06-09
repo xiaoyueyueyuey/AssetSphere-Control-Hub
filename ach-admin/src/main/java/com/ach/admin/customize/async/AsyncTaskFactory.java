@@ -3,7 +3,7 @@ package com.ach.admin.customize.async;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.extra.spring.SpringUtil;
-import com.ach.admin.domain.common.CommandInvoker;
+import com.ach.domain.CommandInvoker;
 import com.ach.admin.entity.SysOperationLogEntity;
 import com.ach.common.enums.common.LoginStatusEnum;
 import com.ach.domain.system.log.login.command.AddLoginLogCommand;
