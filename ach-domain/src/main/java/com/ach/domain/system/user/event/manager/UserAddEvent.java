@@ -19,7 +19,6 @@ public class UserAddEvent implements DomainEvent {
     private Long roleId;
     private Long postId;
     private String remark;
-
     public void setAggregateId(Long aggregateId) {
         this.userId = aggregateId;
     }

@@ -20,12 +20,11 @@ public class RoomModel {
     private String roomName;
     private Integer locationId;
     private Boolean status;
-
+    //
     private Boolean hasAsset;
     private Boolean hasLocation;
     private Boolean nameIsUnique;
     private Boolean isChangeLocation;
-
 
     public Boolean handle(EventQueue eventQueue, AddRoomCommand command) {
         try {

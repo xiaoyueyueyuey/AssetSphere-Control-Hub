@@ -2,6 +2,9 @@ package com.ach.asset.service;
 
 
 import com.ach.asset.entity.AssetClassificationEntity;
+import com.ach.asset.query.ACQuery;
+import com.ach.asset.vo.ACVO;
+import com.ach.infrastructure.page.PageCustomDTO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -14,4 +17,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IAssetClassificationService extends IService<AssetClassificationEntity> {
 
+    PageCustomDTO<ACVO> getACNav(ACQuery query);
 }

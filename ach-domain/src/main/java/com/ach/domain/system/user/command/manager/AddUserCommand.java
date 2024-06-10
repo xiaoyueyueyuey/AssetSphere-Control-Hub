@@ -3,6 +3,7 @@ package com.ach.domain.system.user.command.manager;
 
 import com.ach.common.annotation.excel.ExcelColumn;
 import com.ach.domain.Command;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 /**
@@ -13,6 +14,7 @@ public class AddUserCommand implements Command {
     @ExcelColumn(name = "部门ID")
     private Long deptId;
     @ExcelColumn(name = "用户名")
+    @NotBlank(message = "用户名不能为空")
     private String username;
     @ExcelColumn(name = "昵称")
     private String nickname;
@@ -34,6 +36,5 @@ public class AddUserCommand implements Command {
     private Long postId;
     @ExcelColumn(name = "备注")
     private String remark;
-
 
 }

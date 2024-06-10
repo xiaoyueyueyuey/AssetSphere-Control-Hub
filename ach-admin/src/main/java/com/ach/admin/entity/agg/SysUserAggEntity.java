@@ -25,8 +25,11 @@ public class SysUserAggEntity implements Serializable {
     @Schema(description = "用户邮箱")
     @TableField("email")
     private String email;
-
     @Schema(description = "手机号码")
     @TableField("phone_number")
     private String phoneNumber;
+
+    @Schema(description = "用户密码")
+    @TableField("password")
+    private String password;
 }

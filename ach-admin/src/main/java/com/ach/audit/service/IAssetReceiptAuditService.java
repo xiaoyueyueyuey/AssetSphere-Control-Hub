@@ -1,6 +1,5 @@
 package com.ach.audit.service;
 
-import com.ach.audit.entity.AssetReceiptAuditEntity;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

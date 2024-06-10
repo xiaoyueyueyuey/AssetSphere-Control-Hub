@@ -71,6 +71,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUserEntity
 
     @Override
     public Page<SearchUserDO> getUserList(AbstractPageQuery<SearchUserDO> query) {
+
         return baseMapper.getUserList(query.toPage(), query.toQueryWrapper());
     }
 

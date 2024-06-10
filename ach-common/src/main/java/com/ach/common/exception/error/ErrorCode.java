@@ -230,6 +230,10 @@ public enum ErrorCode implements ErrorCodeInterface {
         USER_ADMIN_CAN_NOT_BE_MODIFY(10515, "管理员不允许做任何修改"),
         USER_NEW_OLD_PASSWORD_IS_NOT_EQUAL(10516, "新密码与旧密码不同"),
 
+        // ---------------------------------- ASSET -----------------------------------------------
+        ASSET_CLASSIFICATION_NAME_IS_NOT_UNIQUE(10601, "资产分类名称：{}, 已存在"),
+        ASSET_CLASSIFICATION_NOT_EXIST(10602, "资产分类不存在"),
+
         ;
 
         private final int code;

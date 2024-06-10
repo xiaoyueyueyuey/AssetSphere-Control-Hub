@@ -20,6 +20,7 @@ public class UserModel {
     private String username;
     private String phoneNumber;
     private String email;
+    private String password;
     //下面的属性不用存储到数据库
     private Boolean userNameIsUnique;
     private Boolean emailIsUnique;

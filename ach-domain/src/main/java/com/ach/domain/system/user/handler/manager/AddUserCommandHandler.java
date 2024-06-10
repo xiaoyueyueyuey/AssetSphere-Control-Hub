@@ -81,6 +81,7 @@ public class AddUserCommandHandler implements CommandHandler<AddUserCommand> {
         } else {
             userModel.setPostIsExist(true);
         }
+        userModel.setPassword(command.getPassword());
         Boolean handle = userModel.handle(eventQueue, command);
         if (handle) {
             Long userId = userRepository.save(userModel);

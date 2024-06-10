@@ -38,7 +38,6 @@ public class UserRepositoryImpl implements UserRepository {
         BeanUtils.copyProperties(sysUserAggEntity, userModel);
         return userModel;
     }
-
     @Override
     public Long save(UserModel model) {
         SysUserAggEntity sysUserAggEntity = new SysUserAggEntity();
@@ -63,33 +62,33 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public Boolean checkUsernameIsUnique(String username) {
 
-        return sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getUsername, username));
+        return !sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getUsername, username));
     }
 
     @Override
     public Boolean checkUsernameIsUnique(String username, Long excludeUserId) {
-        return sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getUsername, username).ne(SysUserAggEntity::getUserId, excludeUserId));
+        return !sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getUsername, username).ne(SysUserAggEntity::getUserId, excludeUserId));
     }
 
     @Override
     public Boolean checkEmailIsUnique(String email) {
-        return sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getEmail, email));
+        return !sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getEmail, email));
     }
 
     @Override
     public Boolean checkEmailIsUnique(String email, Long excludeUserId) {
-        return sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getEmail, email).ne(SysUserAggEntity::getUserId, excludeUserId));
+        return !sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getEmail, email).ne(SysUserAggEntity::getUserId, excludeUserId));
     }
 
     @Override
     public Boolean checkPhoneNumberIsUnique(String phoneNumber) {
-        return sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getPhoneNumber, phoneNumber));
+        return !sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getPhoneNumber, phoneNumber));
 
     }
 
     @Override
     public Boolean checkPhoneNumberIsUnique(String phoneNumber, Long excludeUserId) {
-        return sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getPhoneNumber, phoneNumber).ne(SysUserAggEntity::getUserId, excludeUserId));
+        return !sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getPhoneNumber, phoneNumber).ne(SysUserAggEntity::getUserId, excludeUserId));
     }
 
     @Override

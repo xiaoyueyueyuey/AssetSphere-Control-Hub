@@ -1,5 +1,6 @@
 package com.ach.asset.entity;
 
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -19,7 +20,6 @@ import java.time.LocalDateTime;
 @TableName("asset")
 @Data
 public class AssetEntity implements Serializable {
-
     private static final long serialVersionUID = 1L;
 
     @TableId("asset_id")

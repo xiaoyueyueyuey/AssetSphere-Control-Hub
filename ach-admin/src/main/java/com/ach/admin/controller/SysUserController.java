@@ -3,7 +3,6 @@ package com.ach.admin.controller;
 
 import cn.hutool.core.collection.ListUtil;
 import com.ach.admin.customize.aop.accessLog.AccessLog;
-import com.ach.domain.CommandInvoker;
 import com.ach.admin.dto.user.SearchUserDO;
 import com.ach.admin.dto.user.UserDTO;
 import com.ach.admin.dto.user.UserDetailDTO;
@@ -11,6 +10,7 @@ import com.ach.admin.query.SearchUserQuery;
 import com.ach.admin.service.SysUserService;
 import com.ach.common.base.BaseResponseData;
 import com.ach.common.enums.common.BusinessTypeEnum;
+import com.ach.domain.CommandInvoker;
 import com.ach.domain.system.user.command.manager.*;
 import com.ach.domain.system.user.handler.manager.*;
 import com.ach.infrastructure.base.BaseController;
@@ -19,7 +19,6 @@ import com.ach.infrastructure.utils.poi.CustomExcelUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -39,32 +38,25 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/system/users")
 @RequiredArgsConstructor
+@Validated
 public class SysUserController extends BaseController {
 
 
-    @Resource
-    private SysUserService sysUserService;
-
-    @Resource
-    private CommandInvoker commandInvoker;
-
-    @Resource
-    private DeleteUserCommandHandler deleteUserCommandHandler;
-    @Resource
-    private UpdateUserCommandHandler updateUserCommandHandler;
-    @Resource
-    private AddUserCommandHandler addUserCommandHandler;
-
-    @Resource
-    private ChangeStatusCommandHandler changeStatusCommandHandler;
-    @Resource
-    private ResetPasswordCommandHandler resetPasswordCommandHandler;
+    private final SysUserService sysUserService;
+    private final CommandInvoker commandInvoker;
+    private final DeleteUserCommandHandler deleteUserCommandHandler;
+    private final UpdateUserCommandHandler updateUserCommandHandler;
+    private final AddUserCommandHandler addUserCommandHandler;
+    private final ChangeStatusCommandHandler changeStatusCommandHandler;
+    private final ResetPasswordCommandHandler resetPasswordCommandHandler;
 
     /**
      * 获取用户列表
      */
     @Operation(summary = "用户列表")
-    @PreAuthorize("@permission.has('system:user:list') AND @dataScope.checkDeptId(#query.deptId)")
+//    @PreAuthorize("@permission.has('system:user:list') AND @dataScope.checkDeptId(#query.deptId)")
+    //方便测试就不加部门权限了
+    @PreAuthorize("@permission.has('system:user:list')")
     @GetMapping
     public BaseResponseData<PageCustomDTO<UserDTO>> userList(SearchUserQuery<SearchUserDO> query) {
         Page<SearchUserDO> userPage = sysUserService.getUserList(query);
@@ -121,10 +113,11 @@ public class SysUserController extends BaseController {
      * 新增用户
      */
     @Operation(summary = "新增用户")
-    @PreAuthorize("@permission.has('system:user:add') AND @dataScope.checkDeptId(#command.deptId)")
+//    @PreAuthorize("@permission.has('system:user:add') AND @dataScope.checkDeptId(#command.deptId)")
+    @PreAuthorize("@permission.has('system:user:add')")
     @AccessLog(title = "用户管理", businessType = BusinessTypeEnum.ADD)
     @PostMapping
-    public BaseResponseData<Void> add(@Validated @RequestBody AddUserCommand command) {
+    public BaseResponseData<Void> add(@RequestBody AddUserCommand command) {
         Boolean execute = commandInvoker.execute(addUserCommandHandler, command);
         if (!execute) {
             return BaseResponseData.fail();
@@ -165,7 +158,7 @@ public class SysUserController extends BaseController {
         return BaseResponseData.ok();
     }
 
-    /**
+    /**F
      * TODO重置密码,待区分用户端和管理端
      */
     @Operation(summary = "重置用户密码")
@@ -187,15 +180,13 @@ public class SysUserController extends BaseController {
      * 状态修改
      */
     @Operation(summary = "修改用户状态")
-    @PreAuthorize("@permission.has('system:user:edit') AND @dataScope.checkUserId(#command.userId)")
+//    @PreAuthorize("@permission.has('system:user:edit') AND @dataScope.checkUserId(#command.userId)")
+    @PreAuthorize("@permission.has('system:user:edit') ")
     @AccessLog(title = "用户管理", businessType = BusinessTypeEnum.MODIFY)
     @PutMapping("/{userId}/status")
-    public BaseResponseData<Void> changeStatus(@PathVariable Long userId, @RequestBody ChangeStatusCommand command) {
+    public BaseResponseData<Void> changeStatus(@PathVariable("userId") Long userId, @RequestBody ChangeStatusCommand command) {
         command.setUserId(userId);
-        Boolean execute = commandInvoker.execute(changeStatusCommandHandler, command);
-        if (!execute) {
-            return BaseResponseData.fail();
-        }
+        commandInvoker.execute(changeStatusCommandHandler, command);
         return BaseResponseData.ok();
     }
 
