@@ -237,6 +237,9 @@ public enum ErrorCode implements ErrorCodeInterface {
         ASSET_CLASSIFICATION_NAME_IS_NOT_UNIQUE(10601, "资产分类名称：{}, 已存在"),
         ASSET_CLASSIFICATION_NOT_EXIST(10602, "资产分类不存在"),
 
+        ASSET_LENDING_NOT_EXIST(10603, "资产借出记录不存在"),
+        ASSET_NOT_RETURNED(10604, "资产未归还"),
+        ASSET_CAN_NOT_BE_LEND(10605, "资产不可借出"),
         ;
 
         private final int code;

@@ -1,6 +1,9 @@
 package com.ach.asset.service;
 
 import com.ach.asset.entity.AssetEntity;
+import com.ach.asset.query.AssetQuery;
+import com.ach.asset.vo.AssetVO;
+import com.ach.infrastructure.page.PageCustomDTO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IAssetService extends IService<AssetEntity> {
 
+    PageCustomDTO<AssetVO> getAssetNav(AssetQuery query);
 }
