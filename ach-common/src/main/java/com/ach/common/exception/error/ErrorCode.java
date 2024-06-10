@@ -73,6 +73,9 @@ public enum ErrorCode implements ErrorCodeInterface {
 
         COMMON_FILE_NOT_ALLOWED_TO_DOWNLOAD(10004, "文件名称({})非法，不允许下载"),
 
+
+        COMMOM_STATUS_IS_NOT_VALID(10005, "状态不合法"),
+
         // ----------------------------- PERMISSION -----------------------------------
 
         PERMISSION_FORBIDDEN_TO_MODIFY_ADMIN(10101, "不允许修改管理员的信息"),
@@ -371,6 +374,7 @@ public enum ErrorCode implements ErrorCodeInterface {
         LOGIN_CAPTCHA_GENERATE_FAIL(7, "验证码生成失败"),
 
         EXCEL_PROCESS_ERROR(8, "excel处理失败：{}"),
+
 
         ;
 

@@ -36,7 +36,6 @@ public abstract class AbstractQuery<T> {
         QueryWrapper<T> queryWrapper = addQueryCondition();
         addSortCondition(queryWrapper);
         addTimeCondition(queryWrapper);
-
         return queryWrapper;
     }
 
@@ -46,7 +45,6 @@ public abstract class AbstractQuery<T> {
         if (queryWrapper == null || StrUtil.isEmpty(orderColumn)) {
             return;
         }
-
         Boolean sortDirection = convertSortDirection();
         if (sortDirection != null) {
             queryWrapper.orderBy(StrUtil.isNotEmpty(orderColumn), sortDirection,
@@ -63,7 +61,6 @@ public abstract class AbstractQuery<T> {
                     .le(endTime != null, StrUtil.toUnderlineCase(timeRangeColumn), DatePickUtil.getEndOfTheDay(endTime));
         }
     }
-
     /**
      * 获取前端传来的排序方向  转换成MyBatisPlus所需的排序参数 boolean=isAsc
      *

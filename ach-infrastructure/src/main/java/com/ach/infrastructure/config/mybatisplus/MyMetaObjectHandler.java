@@ -23,6 +23,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         this.strictInsertFill(metaObject, "updateTime", LocalDate::now, LocalDate.class);
         this.strictInsertFill(metaObject, "status", () -> false, Boolean.class);
         this.strictInsertFill(metaObject, "status", () -> (short) 0, Short.class);
+        this.strictInsertFill(metaObject, "status", () -> (byte) 0, Byte.class);
         this.strictInsertFill(metaObject, "deleted", () -> false, Boolean.class);
         this.strictInsertFill(metaObject, "remark", () -> "", String.class);
     }

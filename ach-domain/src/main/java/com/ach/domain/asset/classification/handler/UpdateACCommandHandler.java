@@ -3,7 +3,7 @@ package com.ach.domain.asset.classification.handler;
 import com.ach.domain.CommandHandler;
 import com.ach.domain.EventQueue;
 import com.ach.domain.asset.classification.AssetClassificationModel;
-import com.ach.domain.asset.classification.AssetClassifinationRepository;
+import com.ach.domain.asset.classification.AssetClassificationRepository;
 import com.ach.domain.asset.classification.command.UpdateACCommand;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class UpdateACCommandHandler implements CommandHandler<UpdateACCommand> {
 
 
-    private final AssetClassifinationRepository repository;
+    private final AssetClassificationRepository repository;
 
     @Override
     public Boolean handle(EventQueue eventQueue, UpdateACCommand command) {

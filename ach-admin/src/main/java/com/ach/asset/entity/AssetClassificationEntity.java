@@ -3,6 +3,7 @@ package com.ach.asset.entity;
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -16,6 +17,7 @@ import java.io.Serializable;
 @Data
 @TableName("asset_classification")
 public class AssetClassificationEntity implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
     /**
      * 资产分类id

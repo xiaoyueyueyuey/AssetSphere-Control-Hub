@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableLogic;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * Entity基类
@@ -23,7 +23,7 @@ public class BaseEntity<T> {
 
     @Schema(description = "创建时间")
     @TableField(value = "create_time", fill = FieldFill.INSERT)
-    private LocalDateTime createTime;
+    private Date createTime;
 
     @Schema(description = "更新者ID")
     @TableField(value = "updater_id", fill = FieldFill.UPDATE, updateStrategy = FieldStrategy.NOT_NULL)
@@ -31,7 +31,7 @@ public class BaseEntity<T> {
 
     @Schema(description = "更新时间")
     @TableField(value = "update_time", fill = FieldFill.UPDATE)
-    private LocalDateTime updateTime;
+    private Date updateTime;
     /**
      * deleted字段请在数据库中 设置为tinyInt   并且非null   默认值为0
      */

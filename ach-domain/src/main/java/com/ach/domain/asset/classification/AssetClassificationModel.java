@@ -21,26 +21,18 @@ public class AssetClassificationModel {
     private Boolean status;
 
     private Boolean nameIsUnique;
-
     public Boolean handle(EventQueue eventQueue, AddACCommand command) {
-        try {
-            checkNameIsUnique();
-        } catch (ApiException e) {
-            return false;
-        }
+        checkNameIsUnique();
         ACAddEvent acAddEvent = new ACAddEvent();
         BeanUtils.copyProperties(command, acAddEvent);
         eventQueue.enqueue(acAddEvent);
         return true;
     }
-
     public Boolean handle(EventQueue eventQueue, UpdateACCommand command) {
-        try {
-            checkModelIsExist();
-            checkNameIsUnique();
-        } catch (ApiException e) {
-            return false;
-        }
+
+        checkModelIsExist();
+        checkNameIsUnique();
+
         ACUpdateEvent acUpdateEvent = new ACUpdateEvent();
         BeanUtils.copyProperties(command, acUpdateEvent);
         eventQueue.enqueue(acUpdateEvent);
@@ -48,11 +40,9 @@ public class AssetClassificationModel {
     }
 
     public Boolean handle(EventQueue eventQueue, ChangeACStatusCommand command) {
-        try {
-            checkModelIsExist();
-        } catch (ApiException e) {
-            return false;
-        }
+
+        checkModelIsExist();
+
         ACStatusChangeEvent acStatusChangeEvent = new ACStatusChangeEvent();
         BeanUtils.copyProperties(command, acStatusChangeEvent);
         eventQueue.enqueue(acStatusChangeEvent);
@@ -60,11 +50,7 @@ public class AssetClassificationModel {
     }
 
     public Boolean handle(EventQueue eventQueue, DeleteACCommand command) {
-        try {
-            checkModelIsExist();
-        } catch (ApiException e) {
-            return false;
-        }
+        checkModelIsExist();
         ACDeleteEvent acDeleteEvent = new ACDeleteEvent();
         BeanUtils.copyProperties(command, acDeleteEvent);
         eventQueue.enqueue(acDeleteEvent);

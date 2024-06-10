@@ -3,7 +3,7 @@ package com.ach.domain.asset.classification.handler;
 import com.ach.domain.CommandHandler;
 import com.ach.domain.EventQueue;
 import com.ach.domain.asset.classification.AssetClassificationModel;
-import com.ach.domain.asset.classification.AssetClassifinationRepository;
+import com.ach.domain.asset.classification.AssetClassificationRepository;
 import com.ach.domain.asset.classification.command.AddACCommand;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 @Component
 public class AddACCommandHandler implements CommandHandler<AddACCommand> {
-    private final AssetClassifinationRepository roomRepository;
+    private final AssetClassificationRepository roomRepository;
 
     @Override
     public Boolean handle(EventQueue eventQueue, AddACCommand command) {

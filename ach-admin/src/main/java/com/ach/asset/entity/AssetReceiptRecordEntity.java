@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * <p>
@@ -45,6 +46,13 @@ public class AssetReceiptRecordEntity extends BaseEntity<AssetReceiptRecordEntit
      * 存放房间id
      */
     private Integer roomId;
+
+    private String assetName;
+
+    private BigDecimal unitPrice;
+    private BigDecimal totalPrice;
+
+    private Integer acId;
 
 
 }

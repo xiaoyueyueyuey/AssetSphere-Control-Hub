@@ -1,6 +1,9 @@
 package com.ach.asset.service;
 
 import com.ach.asset.entity.AssetReceiptRecordEntity;
+import com.ach.asset.query.ARQuery;
+import com.ach.asset.vo.ARVO;
+import com.ach.infrastructure.page.PageCustomDTO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IAssetReceiptRecordService extends IService<AssetReceiptRecordEntity> {
 
+    PageCustomDTO<ARVO> getARNav(ARQuery query);
 }

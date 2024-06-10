@@ -1,6 +1,8 @@
 package com.ach.asset.entity;
 
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -31,21 +33,23 @@ public class AssetEntity implements Serializable {
 
     private String assetName;
 
-    private LocalDateTime createTime;
 
-    private LocalDateTime updateTime;
 
     private String assetNumber;
 
     private String assetModel;
 
-    private Byte status;
-
-    private Byte deleted;
-
     private String remark;
 
     private Integer roomId;
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime createTime;
+    @TableField(fill = FieldFill.UPDATE)
+    private LocalDateTime updateTime;
 
+    @TableField(fill = FieldFill.INSERT)
+    private Byte status;
+    @TableField(fill = FieldFill.INSERT)
+    private Boolean deleted;
 
 }

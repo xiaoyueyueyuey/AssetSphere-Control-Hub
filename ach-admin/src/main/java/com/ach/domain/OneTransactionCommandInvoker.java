@@ -24,7 +24,6 @@ public class OneTransactionCommandInvoker implements CommandInvoker {
         domainEventDispatcher.dispatchNow(simpleEventQueue);
         return result;
     }
-
     @Transactional
     @Override
     public <T extends Command> Boolean execute(CommandHandler<T> commandHandler, T command) {
