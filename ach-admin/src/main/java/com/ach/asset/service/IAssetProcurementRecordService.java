@@ -2,6 +2,9 @@ package com.ach.asset.service;
 
 
 import com.ach.asset.entity.AssetProcurementRecordEntity;
+import com.ach.asset.query.APQuery;
+import com.ach.asset.vo.ARVO;
+import com.ach.infrastructure.page.PageCustomDTO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -14,4 +17,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IAssetProcurementRecordService extends IService<AssetProcurementRecordEntity> {
 
+    PageCustomDTO<ARVO> getAPNav(APQuery query);
 }

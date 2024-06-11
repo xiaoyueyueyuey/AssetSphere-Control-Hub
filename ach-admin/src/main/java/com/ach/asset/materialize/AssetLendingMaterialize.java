@@ -33,7 +33,6 @@ public class AssetLendingMaterialize implements DomainEventListener {
     }
 
     private void returnAsset(AssetReturnEvent event) {
-
         AssetLendingRecordEntity assetLendingRecordEntity = new AssetLendingRecordEntity();
         assetLendingRecordEntity.setLendingId(event.getLendingId());
         assetLendingRecordEntity.setReturnStatus(true);//已归还，修改状态

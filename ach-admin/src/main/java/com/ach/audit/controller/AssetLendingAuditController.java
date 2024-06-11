@@ -7,6 +7,7 @@ import com.ach.domain.audit.asset.lending.AuditAssetLendingCommandHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +25,7 @@ public class AssetLendingAuditController {
     private final AuditAssetLendingCommandHandler handler;
 
     @PutMapping
-    public BaseResponseData<Void> auditAssetLending(AuditAssetLendingCommand command) {
+    public BaseResponseData<Void> auditAssetLending(@RequestBody AuditAssetLendingCommand command) {
         commandInvoker.execute(handler, command);
         return BaseResponseData.ok();
     }

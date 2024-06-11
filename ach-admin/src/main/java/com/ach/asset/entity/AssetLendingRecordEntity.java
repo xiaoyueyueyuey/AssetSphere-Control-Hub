@@ -63,11 +63,16 @@ public class AssetLendingRecordEntity implements Serializable {
      * 0未归还,1已归还
      */
     private Boolean returnStatus;
-
+    /**
+     * 0启用 1停用
+     */
+    @TableField(fill = FieldFill.INSERT)
     private Boolean status;
     /**
      * 逻辑删除
      */
+    @TableLogic
+    @TableField(fill = FieldFill.INSERT)
     private Boolean deleted;
 
 }

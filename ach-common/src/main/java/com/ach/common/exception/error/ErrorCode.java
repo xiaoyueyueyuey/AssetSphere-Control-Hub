@@ -241,6 +241,9 @@ public enum ErrorCode implements ErrorCodeInterface {
         ASSET_NOT_RETURNED(10604, "资产未归还"),
         ASSET_CAN_NOT_BE_LEND(10605, "资产不可借出"),
         ASSET_LENDING_HAS_BEEN_AUDITED(10606, "资产借出记录已审核"),
+        PROCUREMENT_HAS_BEEN_FINISHED(10607, "资产采购已完成"),
+        ASSET_PROCUREMENT_NOT_EXIST(10608, "资产采购记录不存在"),
+        ASSET_PROCUREMENT_HAS_BEEN_AUDITED(10609, "资产采购记录已审核"),
         ;
 
         private final int code;

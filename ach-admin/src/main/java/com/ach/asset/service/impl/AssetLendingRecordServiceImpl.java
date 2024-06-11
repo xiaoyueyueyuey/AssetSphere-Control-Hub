@@ -27,9 +27,9 @@ public class AssetLendingRecordServiceImpl extends ServiceImpl<AssetLendingRecor
     public PageCustomDTO<AssetLendingVO> getALNav(AssetLendingQuery query) {
 
         Page<AssetLendingVO> page = new Page<>(query.getPageSize(), query.getPageNum());
-        Page<AssetLendingVO> assetLendingVOPage = this.baseMapper.selectALNav(page, query.getUserId(), query.getUserName(), query.getReturnStatus(), query.getAuditStatus());
+        this.baseMapper.selectALNav(page, query.getUserId(), query.getUserName(), query.getReturnStatus(), query.getAuditStatus());
 
-        return new PageCustomDTO<>(assetLendingVOPage.getRecords(), assetLendingVOPage.getTotal());
+        return new PageCustomDTO<>(page.getRecords(), page.getTotal());
 
 
     }

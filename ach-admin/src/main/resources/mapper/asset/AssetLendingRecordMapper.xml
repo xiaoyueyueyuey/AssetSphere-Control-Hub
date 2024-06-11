@@ -36,14 +36,14 @@
         al.remark,
         al.audit_status,
         al.return_status,
-        ala.audit_remark,
+        ala.remark as audit_remark,
         ala.audit_time,
         au.username as audit_username
-        FROM asset_lending al
+        FROM asset_lending_record al
         LEFT JOIN asset a ON al.asset_id = a.asset_id
-        LEFT JOIN user u ON al.user_id = u.user_id
+        LEFT JOIN sys_user u ON al.user_id = u.user_id
         LEFT JOIN asset_lending_audit ala ON al.lending_id = ala.lending_id
-        LEFT JOIN user au ON ala.audit_user_id = au.user_id
+        LEFT JOIN sys_user au ON ala.audit_user_id = au.user_id
         WHERE al.deleted=0
         <if test="userId != null">
             AND al.user_id = #{userId}

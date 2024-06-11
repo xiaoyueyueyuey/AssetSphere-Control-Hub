@@ -1,4 +1,4 @@
-package com.ach.asset.domain;
+package com.ach.asset.domain.repository;
 
 
 import com.ach.asset.entity.AssetLendingRecordEntity;

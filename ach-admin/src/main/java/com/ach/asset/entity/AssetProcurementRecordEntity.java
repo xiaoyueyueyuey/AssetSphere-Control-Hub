@@ -1,8 +1,6 @@
 package com.ach.asset.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -35,9 +33,19 @@ public class AssetProcurementRecordEntity implements Serializable {
     private Long userId;
 
     /**
-     * 采购所需费用
+     * 采购单价
      */
-    private BigDecimal money;
+    private BigDecimal unitMoney;
+
+    /**
+     * 采购数量
+     */
+    private Integer count;
+
+    /**
+     * 采购总价
+     */
+    private BigDecimal totalMoney;
 
     /**
      * 采购内容
@@ -47,11 +55,13 @@ public class AssetProcurementRecordEntity implements Serializable {
     /**
      * 申请时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 
     /**
      * 更新时间
      */
+    @TableField(fill = FieldFill.UPDATE)
     private LocalDateTime updateTime;
 
     /**
@@ -60,13 +70,21 @@ public class AssetProcurementRecordEntity implements Serializable {
     private Byte auditStatus;
 
     /**
-     * 0未采购 1正在采购 2采购完成
+     * 0正在采购 1采购完成
      */
-    private Byte procurementStatus;
+    private Boolean procurementStatus;
+
+    /**
+     * 0正常申请 1取消申请
+     */
+    @TableField(fill = FieldFill.INSERT)
+    private Boolean status;
 
     /**
      * 逻辑删除
      */
-    private Byte deleted;
+    @TableField(fill = FieldFill.INSERT)
+    @TableLogic
+    private Boolean deleted;
 
 }
