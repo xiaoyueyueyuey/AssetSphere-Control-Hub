@@ -24,8 +24,6 @@ public class ApplyForLendingAssetCommand implements Command {
 
     private String remark;
 
-    private Byte auditStatus;
-    private Byte returnStatus;
 
 
 }

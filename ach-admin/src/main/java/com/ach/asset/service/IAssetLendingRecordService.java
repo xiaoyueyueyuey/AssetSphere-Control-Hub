@@ -2,6 +2,9 @@ package com.ach.asset.service;
 
 
 import com.ach.asset.entity.AssetLendingRecordEntity;
+import com.ach.asset.query.AssetLendingQuery;
+import com.ach.asset.vo.AssetLendingVO;
+import com.ach.infrastructure.page.PageCustomDTO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -14,4 +17,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IAssetLendingRecordService extends IService<AssetLendingRecordEntity> {
 
+    PageCustomDTO<AssetLendingVO> getALNav(AssetLendingQuery query);
 }

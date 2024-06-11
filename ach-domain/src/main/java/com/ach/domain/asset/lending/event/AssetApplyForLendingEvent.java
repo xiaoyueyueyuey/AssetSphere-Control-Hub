@@ -12,6 +12,4 @@ public class AssetApplyForLendingEvent implements DomainEvent {
     private LocalDate loanTime;
     private LocalDate returnTime;
     private String remark;
-    private Byte auditStatus;
-    private Byte returnStatus;
 }

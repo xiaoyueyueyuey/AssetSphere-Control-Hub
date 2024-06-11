@@ -5,7 +5,6 @@ import com.ach.domain.EventQueue;
 import com.ach.domain.asset.asset.AssetModel;
 import com.ach.domain.asset.asset.AssetRepository;
 import com.ach.domain.asset.lending.AssetLendingModel;
-import com.ach.domain.asset.lending.AssetLendingRepository;
 import com.ach.domain.asset.lending.command.ApplyForLendingAssetCommand;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 @Component
 public class ApplyForLendingAssetCommandHandler implements CommandHandler<ApplyForLendingAssetCommand> {
-    private final AssetLendingRepository repository;
     private final AssetRepository assetRepository;
 
     @Override

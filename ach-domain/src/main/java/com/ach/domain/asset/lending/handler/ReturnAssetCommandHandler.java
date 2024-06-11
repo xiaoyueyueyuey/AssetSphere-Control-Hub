@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class ReturnAssetCommandHandler implements CommandHandler<ReturnAssetCommand> {
     private final AssetLendingRepository repository;
-
     @Override
     public Boolean handle(EventQueue eventQueue, ReturnAssetCommand command) {
 

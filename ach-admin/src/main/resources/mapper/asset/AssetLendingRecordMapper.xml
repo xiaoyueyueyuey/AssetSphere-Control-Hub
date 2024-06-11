@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ach.asset.mapper.AssetLendingRecordMapper">
+    <resultMap id="ALVO" type="com.ach.asset.vo.AssetLendingVO">
+        <id column="lending_id" property="lendingId"/>
+        <result column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="asset_id" property="assetId"/>
+        <result column="asset_name" property="assetName"/>
+        <result column="assetModel" property="assetModel"/>
+        <result column="lending_time" property="lendingTime"/>
+        <result column="return_time" property="returnTime"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="remark" property="remark"/>
+        <result column="audit_status" property="auditStatus"/>
+        <result column="return_status" property="returnStatus"/>
+        <result column="audit_remark" property="auditRemark"/>
+        <result column="audit_time" property="auditTime"/>
+        <result column="audit_username" property="auditUserName"/>
 
+
+    </resultMap>
+
+    <select id="selectALNav" resultType="com.ach.asset.vo.AssetLendingVO">
+        SELECT al.lending_id,
+        al.user_id,
+        u.username,
+        al.asset_id,
+        a.asset_name,
+        a.asset_model,
+        al.lending_time,
+        al.return_time,
+        al.create_time,
+        al.update_time,
+        al.remark,
+        al.audit_status,
+        al.return_status,
+        ala.audit_remark,
+        ala.audit_time,
+        au.username as audit_username
+        FROM asset_lending al
+        LEFT JOIN asset a ON al.asset_id = a.asset_id
+        LEFT JOIN user u ON al.user_id = u.user_id
+        LEFT JOIN asset_lending_audit ala ON al.lending_id = ala.lending_id
+        LEFT JOIN user au ON ala.audit_user_id = au.user_id
+        WHERE al.deleted=0
+        <if test="userId != null">
+            AND al.user_id = #{userId}
+        </if>
+        <if test="userName != null">
+            AND u.username like concat('%',#{userName},'%')
+        </if>
+        <if test="returnStatus != null">
+            AND al.return_status = #{returnStatus}
+        </if>
+        <if test="auditStatus != null">
+            AND al.audit_status = #{auditStatus}
+        </if>
+    </select>
 </mapper>

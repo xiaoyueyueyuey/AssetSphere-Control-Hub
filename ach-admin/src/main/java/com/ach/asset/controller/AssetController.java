@@ -28,13 +28,11 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("/ach-admin/asset")
 public class AssetController {
-
     private final IAssetService assetService;
     private final CommandInvoker commandInvoker;
     private final UpdateAssetCommandHandler updateAssetCommandHandler;
     private final ChangeAssetStatusCommandHandler changeAssetStatusCommandHandler;
     private final DeleteAssetCommandHandler deleteAssetCommandHandler;
-
     @GetMapping
     public BaseResponseData<PageCustomDTO<AssetVO>> getAssetNav(AssetQuery query) {
         return BaseResponseData.ok(assetService.getAssetNav(query));

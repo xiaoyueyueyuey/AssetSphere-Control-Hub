@@ -23,7 +23,6 @@ public class AssetModel {
     private Boolean acIsExist;
 
     public Boolean handle(EventQueue eventQueue, UpdateAssetCommand command) {
-
         checkModelIsExist();
         checkRoomIsExist();
         checkAcIsExist();
@@ -36,7 +35,6 @@ public class AssetModel {
     public Boolean handle(EventQueue eventQueue, ChangeAssetStatusCommand command) {
         checkModelIsExist();
         checkStatusIsValid();
-
         AssetStatusChangeEvent assetStatusChangeEvent = new AssetStatusChangeEvent();
         BeanUtils.copyProperties(command, assetStatusChangeEvent);
         eventQueue.enqueue(assetStatusChangeEvent);

@@ -34,7 +34,6 @@ public class AssetMaterialize implements DomainEventListener {
         assetMapper.deleteById(event.getAssetId());
     }
 
-
     private void updateAsset(AssetUpdateEvent event) {
         AssetEntity assetEntity = new AssetEntity();
         BeanUtils.copyProperties(event, assetEntity);

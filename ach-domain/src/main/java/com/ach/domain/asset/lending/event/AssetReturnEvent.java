@@ -5,9 +5,7 @@ import lombok.Data;
 
 @Data
 public class AssetReturnEvent implements DomainEvent {
-    //    @Positive
     private Long lendingId;
-    //    @Positive
     private Long assetId;
 
 }
