@@ -240,6 +240,7 @@ public enum ErrorCode implements ErrorCodeInterface {
         ASSET_LENDING_NOT_EXIST(10603, "资产借出记录不存在"),
         ASSET_NOT_RETURNED(10604, "资产未归还"),
         ASSET_CAN_NOT_BE_LEND(10605, "资产不可借出"),
+        ASSET_LENDING_HAS_BEEN_AUDITED(10606, "资产借出记录已审核"),
         ;
 
         private final int code;
