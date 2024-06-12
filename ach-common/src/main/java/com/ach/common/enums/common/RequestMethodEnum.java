@@ -6,7 +6,7 @@ import com.ach.common.enums.BasicEnum;
 /**
  * Http Method
  *
- * @author valarchie
+ * 
  */
 public enum RequestMethodEnum implements BasicEnum<Integer> {
 

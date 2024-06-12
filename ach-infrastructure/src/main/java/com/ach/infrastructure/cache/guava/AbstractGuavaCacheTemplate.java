@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 缓存接口实现类  二级缓存
  *
- * @author valarchie
+ * 
  */
 @Slf4j
 public abstract class AbstractGuavaCacheTemplate<T> {

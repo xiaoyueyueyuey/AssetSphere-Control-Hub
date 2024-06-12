@@ -3,7 +3,7 @@ package com.ach.admin.dto.menu;
 import lombok.Data;
 
 /**
- * @author valarchie
+ *
  */
 @Data
 public class TransitionDTO {

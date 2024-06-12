@@ -21,7 +21,7 @@ import java.util.Set;
  * 用户信息表 Mapper 接口
  * </p>
  *
- * @author valarchie
+ * 
  * @since 2022-06-16
  */
 @Mapper

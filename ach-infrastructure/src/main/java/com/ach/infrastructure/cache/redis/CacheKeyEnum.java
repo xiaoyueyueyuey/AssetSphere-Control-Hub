@@ -3,7 +3,7 @@ package com.ach.infrastructure.cache.redis;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author valarchie
+ * 
  */
 public enum CacheKeyEnum {
 

@@ -4,7 +4,7 @@ package com.ach.common.constant;
 /**
  * 通用常量信息
  *
- * @author valarchie
+ *
  */
 public class Constants {
     public static final int KB = 1024;

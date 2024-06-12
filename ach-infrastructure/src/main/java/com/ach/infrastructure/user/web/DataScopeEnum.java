@@ -6,7 +6,7 @@ import com.ach.common.enums.BasicEnum;
 /**
  * 对应sys_role表的data_scope字段
  *
- * @author valarchie
+ * 
  */
 public enum DataScopeEnum implements BasicEnum<Integer> {
 

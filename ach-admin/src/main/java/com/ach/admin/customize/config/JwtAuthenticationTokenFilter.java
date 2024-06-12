@@ -22,15 +22,12 @@ import java.io.IOException;
  * token过滤器 验证token有效性
  * 继承OncePerRequestFilter类的话  可以确保只执行filter一次， 避免执行多次
  *
- * @author valarchie
  */
 @Component
 @Slf4j
 @RequiredArgsConstructor
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
-
     private final TokenService tokenService;
-
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
             throws IOException, ServletException {

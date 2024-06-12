@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 分页模型类
  *
- * @author valarchie
+ * 
  */
 @Data
 public class PageCustomDTO<T> {

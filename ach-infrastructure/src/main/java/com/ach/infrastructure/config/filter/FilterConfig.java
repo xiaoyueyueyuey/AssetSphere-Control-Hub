@@ -17,7 +17,7 @@ import org.springframework.web.filter.CorsFilter;
  * Filter配置
  * Filter Configuration Class
  *
- * @author valarchie
+ *
  */
 @Configuration
 public class FilterConfig {

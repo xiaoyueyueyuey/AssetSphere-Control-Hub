@@ -8,7 +8,7 @@ import lombok.Data;
 /**
  * 响应信息主体
  *
- * @author valarchie
+ * 
  */
 @Data
 @AllArgsConstructor

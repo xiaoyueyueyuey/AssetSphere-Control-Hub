@@ -7,7 +7,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 /**
- * @author valarchie
+ *
  */
 @Data
 public class AddUserCommand implements Command {

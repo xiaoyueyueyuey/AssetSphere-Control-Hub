@@ -3,12 +3,12 @@ package com.ach.admin.controller;
 
 import com.ach.admin.common.cache.CacheCenter;
 import com.ach.admin.customize.aop.accessLog.AccessLog;
-import com.ach.domain.CommandInvoker;
 import com.ach.admin.dto.config.ConfigDTO;
 import com.ach.admin.query.ConfigQuery;
 import com.ach.admin.service.SysConfigService;
 import com.ach.common.base.BaseResponseData;
 import com.ach.common.enums.common.BusinessTypeEnum;
+import com.ach.domain.CommandInvoker;
 import com.ach.domain.system.config.UpdateConfigCommand;
 import com.ach.domain.system.config.UpdateConfigCommandHandler;
 import com.ach.infrastructure.base.BaseController;
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * 参数配置 信息操作处理
  *
- * @author valarchie
+ *
  */
 @RestController
 @RequestMapping("/system")

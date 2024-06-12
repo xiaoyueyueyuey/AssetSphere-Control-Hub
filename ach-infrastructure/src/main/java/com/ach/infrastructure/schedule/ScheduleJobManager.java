@@ -8,14 +8,12 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 如果想开启定时任务   请不要注释@Component注解
  *
- * @author valarchie
+ *
  */
 //@Component
 @Slf4j
 public class ScheduleJobManager {
-
     /**
      * fixedRate：固定速率执行。每60秒执行一次。
      */
@@ -24,7 +22,6 @@ public class ScheduleJobManager {
         log.info("Current Thread : {}, Fixed Rate Task : The time is now {}",
                 Thread.currentThread().getName(), DateUtil.formatTime(new Date()));
     }
-
     /**
      * fixedDelay：固定延迟执行。距离上一次调用成功后30秒才执。
      */

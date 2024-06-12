@@ -17,10 +17,8 @@ import java.io.IOException;
  */
 @Slf4j
 public class ServletHolderUtil {
-
     private ServletHolderUtil() {
     }
-
     /**
      * 获取request
      */
@@ -57,13 +55,12 @@ public class ServletHolderUtil {
             log.error("返回response失败", e);
         }
     }
-
     /**
      * 获取仅含有项目根路径的url
-     * 比如 localhost:8080/agileboot/user/list
-     * 返回 localhost:8080/agileboot
+     * 比如 localhost:8080/xyboot/user/list
+     * 返回 localhost:8080/xyboot
      *
-     * @return localhost:8080/agileboot
+     * @return localhost:8080/xyboot
      */
     public static String getContextUrl() {
         HttpServletRequest request = (HttpServletRequest) getRequest();

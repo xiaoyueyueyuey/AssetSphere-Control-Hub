@@ -15,7 +15,7 @@ import java.io.Serializable;
  * 角色和菜单关联表
  * </p>
  *
- * @author valarchie
+ *
  * @since 2022-10-02
  */
 @Data

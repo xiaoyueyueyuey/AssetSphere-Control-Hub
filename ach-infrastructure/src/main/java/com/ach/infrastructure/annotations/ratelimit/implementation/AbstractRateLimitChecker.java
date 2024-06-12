@@ -4,7 +4,7 @@ package com.ach.infrastructure.annotations.ratelimit.implementation;
 import com.ach.infrastructure.annotations.ratelimit.RateLimit;
 
 /**
- * @author valarchie
+ * 
  */
 public abstract class AbstractRateLimitChecker {
 

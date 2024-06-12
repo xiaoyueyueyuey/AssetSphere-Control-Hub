@@ -8,7 +8,7 @@ import com.ach.common.enums.dictionary.Dictionary;
 /**
  * 对应sys_menu表的is_visible字段
  *
- * @author valarchie
+ * 
  */
 @Deprecated
 @Dictionary(name = "sysMenu.isVisible")

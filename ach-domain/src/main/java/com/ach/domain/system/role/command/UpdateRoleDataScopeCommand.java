@@ -10,7 +10,7 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @author valarchie
+ *
  */
 @Data
 public class UpdateRoleDataScopeCommand implements Command {

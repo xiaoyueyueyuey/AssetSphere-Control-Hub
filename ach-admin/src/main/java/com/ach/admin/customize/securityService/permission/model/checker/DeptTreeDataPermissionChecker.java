@@ -16,7 +16,7 @@ import java.util.Objects;
 /**
  * 部門数据权限测试接口
  *
- * @author valarchie
+ * 
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 /**
  * Mybatis支持*匹配扫描包
  *
- * @author valarchie
+ * 
  */
 @Configuration
 @EnableTransactionManagement

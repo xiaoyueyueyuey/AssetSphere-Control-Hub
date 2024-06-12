@@ -13,7 +13,7 @@ import lombok.Data;
 import org.springframework.beans.BeanUtils;
 
 /**
- * @author valarchie
+ *
  */
 @Data
 public class DeptModel {

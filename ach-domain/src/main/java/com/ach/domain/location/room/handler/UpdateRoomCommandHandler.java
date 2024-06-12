@@ -33,6 +33,7 @@ public class UpdateRoomCommandHandler implements CommandHandler<UpdateRoomComman
             model.setIsChangeLocation(true);
         } else {
             model.setHasLocation(true);
+            model.setIsChangeLocation(false);
         }
         return model.handle(eventQueue, command);
 

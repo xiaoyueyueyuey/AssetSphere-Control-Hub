@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * Redis缓存模板类，实现了三级缓存机制
  *
  * @param <T> 缓存对象类型
- * @author valarchie
+ *
  */
 @Slf4j
 public class RedisCacheTemplate<T> {

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 /**
  * 登录用户身份权限
  *
- * @author valarchie
+ *
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

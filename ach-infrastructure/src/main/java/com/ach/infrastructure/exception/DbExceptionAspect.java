@@ -15,7 +15,7 @@ import java.sql.SQLException;
 
 
 /**
- * @author valarchie
+ * 
  */
 @Aspect
 @Component

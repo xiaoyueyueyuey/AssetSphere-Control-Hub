@@ -18,7 +18,6 @@ public class ShutdownHook {
     public void destroy() {
         shutdownAllThreadPool();
     }
-
     /**
      * 停止异步执行任务
      */

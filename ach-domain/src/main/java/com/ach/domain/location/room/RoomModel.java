@@ -48,6 +48,7 @@ public class RoomModel {
         }
         RoomUpdateEvent roomUpdateEvent = new RoomUpdateEvent();
         BeanUtils.copyProperties(command, roomUpdateEvent);
+        roomUpdateEvent.setIsChangeLocation(this.getIsChangeLocation());
         eventQueue.enqueue(roomUpdateEvent);
         return true;
     }

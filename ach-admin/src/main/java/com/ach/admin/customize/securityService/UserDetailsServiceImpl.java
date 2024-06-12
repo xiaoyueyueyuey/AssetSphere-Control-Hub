@@ -37,7 +37,7 @@ import java.util.stream.Collectors;
  * 用于SpringSecurity 登录流程
  * 没有办法把这个类 放进loginService中  会在SecurityConfig中造成循环依赖
  *
- * @author valarchie
+ *
  * // * @see com.ach.infrastructure.config.SecurityConfig#filterChain(HttpSecurity)
  */
 @Service

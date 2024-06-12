@@ -7,7 +7,7 @@ import com.ach.common.exception.error.ErrorCode;
 import java.util.Objects;
 
 /**
- * @author valarchie
+ *
  */
 public class BasicEnumUtil {
 

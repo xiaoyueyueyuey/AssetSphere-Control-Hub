@@ -17,7 +17,7 @@ import java.util.List;
  * 数据权限校验服务
  * This service is responsible for checking data permissions.
  *
- * @author valarchie
+ *
  */
 @Service("dataScope")  // 声明这是一个Spring的Service组件，并将其命名为"dataScope"
 @RequiredArgsConstructor  // 使用Lombok自动生成构造函数

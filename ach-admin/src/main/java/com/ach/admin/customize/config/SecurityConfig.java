@@ -39,7 +39,7 @@ import org.springframework.web.filter.CorsFilter;
 /**
  * 主要配置登录流程逻辑涉及以下几个类
  *
- * @author valarchie
+ *
  * @see UserDetailsServiceImpl#loadUserByUsername  用于登录流程通过用户名加载用户
  * @see this#unauthorizedHandler()  用于用户未授权或登录失败处理
  * @see this#logOutSuccessHandler 用于退出登录成功后的逻辑

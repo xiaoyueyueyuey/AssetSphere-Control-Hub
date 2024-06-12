@@ -19,7 +19,7 @@ import java.util.Date;
  * 用户信息表
  * </p>
  *
- * @author valarchie
+ * 
  * @since 2023-02-27
  */
 

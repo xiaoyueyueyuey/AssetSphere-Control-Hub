@@ -9,11 +9,10 @@ import java.util.concurrent.*;
 /**
  * 异步任务管理器
  *
- * @author valarchie
+ * 
  */
 @Slf4j
 public class ThreadPoolManager {
-
     private static final ThreadPoolExecutor THREAD_EXECUTOR = new ThreadPoolExecutor(
             ThreadConfig.CORE_POOL_SIZE, ThreadConfig.MAX_POOL_SIZE,
             ThreadConfig.KEEP_ALIVE_SECONDS, TimeUnit.SECONDS,

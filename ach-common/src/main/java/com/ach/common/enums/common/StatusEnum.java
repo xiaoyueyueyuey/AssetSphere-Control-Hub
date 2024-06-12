@@ -8,7 +8,7 @@ import com.ach.common.enums.dictionary.Dictionary;
 /**
  * 除非表有特殊指明的话，一般用这个枚举代表 status字段
  *
- * @author valarchie
+ *
  */
 @Dictionary(name = "common.status")
 public enum StatusEnum implements DictionaryEnum<Integer> {

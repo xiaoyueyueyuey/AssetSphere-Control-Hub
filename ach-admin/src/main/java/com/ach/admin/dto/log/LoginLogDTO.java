@@ -11,7 +11,7 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * @author valarchie
+ *
  */
 @Data
 @ExcelSheet(name = "登录日志")

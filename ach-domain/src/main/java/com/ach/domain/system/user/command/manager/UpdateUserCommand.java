@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * @author valarchie
+ * 
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

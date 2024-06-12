@@ -8,7 +8,7 @@ import com.ach.common.enums.dictionary.Dictionary;
 /**
  * 对应sys_operation_log的business_type
  *
- * @author valarchie
+ *
  */
 @Dictionary(name = "sysOperationLog.businessType")
 public enum BusinessTypeEnum implements DictionaryEnum<Integer> {

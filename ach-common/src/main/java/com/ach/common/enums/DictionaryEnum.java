@@ -3,7 +3,7 @@ package com.ach.common.enums;
 /**
  * 字典类型 接口
  *
- * @author valarchie
+ *
  */
 public interface DictionaryEnum<T> extends BasicEnum<T> {
 

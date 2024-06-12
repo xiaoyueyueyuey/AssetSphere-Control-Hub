@@ -26,7 +26,7 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * @author valarchie
+ *
  */
 @Slf4j
 public class OperationLogModel extends SysOperationLogEntity {
@@ -90,7 +90,6 @@ public class OperationLogModel extends SysOperationLogEntity {
             this.setStatus(OperationStatusEnum.SUCCESS.getValue());
         }
     }
-
     /**
      * 获取请求的参数，放到log中
      *

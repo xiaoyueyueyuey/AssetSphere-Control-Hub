@@ -2,7 +2,7 @@ package com.ach.common.enums;
 
 /**
  * @param <T>
- * @author valarchie
+ *
  * 普通的枚举 接口
  */
 public interface BasicEnum<T> {

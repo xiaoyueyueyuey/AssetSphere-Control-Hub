@@ -13,7 +13,7 @@ import java.util.Date;
  * 系统访问记录
  * </p>
  *
- * @author valarchie
+ * 
  * @since 2022-10-02
  */
 @Data

@@ -8,7 +8,7 @@ import com.ach.common.enums.dictionary.Dictionary;
 /**
  * 系统内代表是与否的枚举
  *
- * @author valarchie
+ *
  */
 @Dictionary(name = "common.yesOrNo")
 public enum YesOrNoEnum implements DictionaryEnum<Integer> {

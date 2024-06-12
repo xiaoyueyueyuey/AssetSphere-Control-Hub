@@ -40,9 +40,8 @@ public class RoomRepositoryImpl implements RoomRepository {
     }
 
     @Override
-    public Boolean checkRoomNameIsUnique(String roomName) {
-       return !mapper.exists(new LambdaQueryWrapper<>(AssetStorageRoomEntity.class).eq(AssetStorageRoomEntity::getRoomName, roomName));
-
+    public Boolean checkRoomNameIsUniqueInOrderLocation(String roomName, Integer locationId) {
+        return !mapper.exists(new LambdaQueryWrapper<>(AssetStorageRoomEntity.class).eq(AssetStorageRoomEntity::getRoomName, roomName).eq(AssetStorageRoomEntity::getLocationId, locationId));
     }
 
     @Override

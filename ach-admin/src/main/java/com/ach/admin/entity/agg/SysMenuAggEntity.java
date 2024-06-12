@@ -1,9 +1,6 @@
 package com.ach.admin.entity.agg;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -41,4 +38,8 @@ public class SysMenuAggEntity implements Serializable {
     @Schema(description = "父菜单类型")
     @TableField("parent_menu_type")
     private Integer parentMenuType;//父菜单类型
+
+    @TableLogic
+    @TableField(fill = FieldFill.INSERT)
+    private Boolean deleted;
 }

@@ -35,10 +35,9 @@ import java.util.*;
  * Jackson工具类 优势： 数据量高于百万的时候，速度和FastJson相差极小 API和注解支持最完善，可定制性最强
  * 支持的数据源最广泛（字符串，对象，文件、流、URL）
  *
- * @author valarchie
+ *
  */
 public class JacksonUtil {
-
     private static final Set<JsonReadFeature> JSON_READ_FEATURES_ENABLED = CollUtil.newHashSet(
             //允许在JSON中使用Java注释
             JsonReadFeature.ALLOW_JAVA_COMMENTS,

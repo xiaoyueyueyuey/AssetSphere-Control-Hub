@@ -3,7 +3,7 @@ package com.ach.infrastructure.user.base;
 import lombok.Data;
 
 /**
- * @author valarchie
+ *
  */
 @Data
 public class LoginInfo {

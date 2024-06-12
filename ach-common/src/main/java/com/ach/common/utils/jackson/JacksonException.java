@@ -1,7 +1,7 @@
 package com.ach.common.utils.jackson;
 
 /**
- * @author valarchie
+ * 
  */
 public class JacksonException extends RuntimeException {
 

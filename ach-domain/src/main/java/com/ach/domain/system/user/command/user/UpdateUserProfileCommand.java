@@ -2,7 +2,7 @@ package com.ach.domain.system.user.command.user;
 
 
 /**
- * @author valarchie
+ *
  */
 
 import com.ach.domain.Command;

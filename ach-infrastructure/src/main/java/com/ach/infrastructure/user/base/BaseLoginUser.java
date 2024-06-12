@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * 登录用户身份权限
  *
- * @author valarchie
+ *
  */
 @Data
 @NoArgsConstructor
@@ -38,7 +38,6 @@ public class BaseLoginUser implements UserDetails {
     protected String username;
     protected String password;
     protected List<GrantedAuthority> authorities = new ArrayList<>();
-
 
     public BaseLoginUser(Long userId, String username, String password) {
         this.userId = userId;

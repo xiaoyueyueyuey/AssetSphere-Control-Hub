@@ -7,7 +7,7 @@ import com.ach.admin.entity.SysUserEntity;
 import lombok.Data;
 
 /**
- * @author valarchie
+ *
  */
 @Data
 public class UserProfileDTO {

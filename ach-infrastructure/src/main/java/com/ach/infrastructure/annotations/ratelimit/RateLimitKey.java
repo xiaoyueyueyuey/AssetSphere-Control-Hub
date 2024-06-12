@@ -3,7 +3,7 @@ package com.ach.infrastructure.annotations.ratelimit;
 /**
  * 限流key
  *
- * @author valarchie
+ *
  */
 public class RateLimitKey {
 

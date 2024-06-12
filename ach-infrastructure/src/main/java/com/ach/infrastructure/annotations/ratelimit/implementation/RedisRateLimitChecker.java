@@ -12,7 +12,7 @@ import org.springframework.data.redis.core.script.RedisScript;
 import org.springframework.stereotype.Component;
 
 /**
- * @author valarchie
+ * 
  */
 @Component
 @RequiredArgsConstructor
@@ -57,7 +57,6 @@ public class RedisRateLimitChecker extends AbstractRateLimitChecker {
         if (currentCount == null) {
             throw new RuntimeException("redis限流器异常，请稍后再试");
         }
-
         if (currentCount.intValue() > maxCount) {
             throw new ApiException(ErrorCode.Client.COMMON_REQUEST_TOO_OFTEN);
         }

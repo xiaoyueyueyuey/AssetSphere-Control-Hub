@@ -3,7 +3,7 @@ package com.ach.domain.system.menu.dto;
 import lombok.Data;
 
 /**
- * @author valarchie
+ *
  */
 @Data
 public class ExtraIconDTO {

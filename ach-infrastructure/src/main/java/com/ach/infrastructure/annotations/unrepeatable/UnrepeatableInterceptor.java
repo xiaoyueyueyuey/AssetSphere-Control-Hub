@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 重复提交拦截器 如果涉及前后端加解密的话  也可以通过继承RequestBodyAdvice来实现
  *
- * @author valarchie
+ * 
  */
 @ControllerAdvice(basePackages = "com.ach")//控制器通知类，用于全局处理请求。通过basePackages属性指定了需要拦截的包路径。
 @Slf4j

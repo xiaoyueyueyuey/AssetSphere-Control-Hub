@@ -25,7 +25,6 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @RequiredArgsConstructor
 public class UnrepeatableAspect {
-
     private final RedissonClient redissonClient;
     private final RedisUtil redisUtil;
 
@@ -60,7 +59,6 @@ public class UnrepeatableAspect {
             RLock lock = redissonClient.getLock(key);
             //锁自动过期时间为 lockTime 秒，确保即使程序异常也不会永久锁定资源,尝试加锁，最多等待0秒，上锁以后5秒自动解锁 [lockTime默认为5s, 可以自定义]
             res = lock.tryLock(0, lockTime, TimeUnit.SECONDS);
-
         } else {
             //方式二，令牌形式防重提交，这里写简单了，没有区分服务，IP啥的，就只有服务器生成随机token，返回给客户端，客户端提交时带上token，服务器验证token是否存在，存在则删除token
             //从请求头中获取 request-token，如果不存在，则抛出异常

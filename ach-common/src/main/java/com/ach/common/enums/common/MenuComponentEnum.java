@@ -4,7 +4,7 @@ package com.ach.common.enums.common;
 import com.ach.common.enums.BasicEnum;
 
 /**
- * @author valarchie
+ * 
  */
 @Deprecated
 public enum MenuComponentEnum implements BasicEnum<Integer> {

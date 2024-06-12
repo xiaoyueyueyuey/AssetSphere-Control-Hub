@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author valarchie
+ *
  */
 @Data
 @Schema(name = "ConfigDTO", description = "配置信息")

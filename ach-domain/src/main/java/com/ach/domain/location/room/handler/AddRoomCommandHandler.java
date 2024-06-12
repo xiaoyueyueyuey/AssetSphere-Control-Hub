@@ -20,7 +20,7 @@ public class AddRoomCommandHandler implements CommandHandler<AddRoomCommand> {
         RoomModel roomModel = new RoomModel();//创建一个新的教室聚合
         Boolean locationIdIsExist = roomService.checkLocationIdIsExist(command.getLocationId());//检查教学楼是否存在
         roomModel.setHasLocation(locationIdIsExist);
-        Boolean roomNameIsUnique=roomRepository.checkRoomNameIsUnique(command.getRoomName());//检查教室名称是否唯一
+        Boolean roomNameIsUnique = roomRepository.checkRoomNameIsUniqueInOrderLocation(command.getRoomName(), command.getLocationId());//检查教室名称是否唯一(在本教学楼内)
         roomModel.setNameIsUnique(roomNameIsUnique);
 
         return roomModel.handle(eventQueue, command);//调用教室聚合的handle方法

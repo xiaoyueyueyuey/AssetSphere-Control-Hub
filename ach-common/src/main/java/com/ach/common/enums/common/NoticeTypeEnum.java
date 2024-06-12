@@ -10,7 +10,7 @@ import com.ach.common.enums.dictionary.Dictionary;
  * 名称一般由对应的表名.字段构成
  * 全局的话使用common作为表名
  *
- * @author valarchie
+ * 
  */
 @Dictionary(name = "sysNotice.noticeType")
 public enum NoticeTypeEnum implements DictionaryEnum<Integer> {

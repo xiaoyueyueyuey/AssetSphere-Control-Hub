@@ -8,7 +8,7 @@ import lombok.EqualsAndHashCode;
 
 
 /**
- * @author valarchie
+ * 
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

@@ -8,7 +8,7 @@ import org.apache.commons.collections4.SetUtils;
 import java.util.Set;
 
 /**
- * @author valarchie
+ * 
  */
 @Data
 @AllArgsConstructor

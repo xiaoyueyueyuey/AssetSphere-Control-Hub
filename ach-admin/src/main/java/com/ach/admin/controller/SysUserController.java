@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
 /**
  * 用户信息,要使用缓存中心，代办
  *
- * @author valarchie
+ * 
  */
 @Tag(name = "用户API", description = "用户相关的增删查改")
 @RestController

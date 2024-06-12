@@ -18,7 +18,7 @@ import java.io.Serializable;
  * 菜单权限表
  * </p>
  *
- * @author valarchie
+ * 
  * @since 2023-07-21
  */
 

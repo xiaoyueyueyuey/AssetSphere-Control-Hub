@@ -9,7 +9,7 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * @author valarchie
+ *
  */
 @Data
 public class DeptDTO {

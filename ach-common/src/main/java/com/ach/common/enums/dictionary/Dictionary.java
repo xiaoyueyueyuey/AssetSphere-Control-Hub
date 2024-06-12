@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 /**
  * 字典类型注解
  *
- * @author valarchie
+ *
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

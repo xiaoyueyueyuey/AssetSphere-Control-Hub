@@ -11,7 +11,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author valarchie
+ *
  */
 //@Component
 public class GuavaCacheBean implements Cache {

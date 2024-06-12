@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
 /**
  * 限流切面处理
  *
- * @author valarchie
+ *
  */
 @Aspect
 @Component
@@ -25,9 +25,7 @@ import java.lang.reflect.Method;
 public class RateLimiterAspect {
 
     private final RedisRateLimitChecker redisRateLimitChecker;
-
     private final MapRateLimitChecker mapRateLimitChecker;
-
     @Before("@annotation(rateLimiter)")
     public void doBefore(JoinPoint point, RateLimit rateLimiter) {
         MethodSignature signature = (MethodSignature) point.getSignature();

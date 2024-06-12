@@ -18,7 +18,7 @@ import java.io.Serializable;
  * 部门表
  * </p>
  *
- * @author valarchie
+ * 
  * @since 2022-10-02
  */
 @EqualsAndHashCode(callSuper = true)

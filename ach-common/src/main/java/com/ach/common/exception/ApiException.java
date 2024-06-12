@@ -11,7 +11,7 @@ import java.util.HashMap;
 /**
  * 统一异常类
  *
- * @author valarchie
+ *
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -44,20 +44,11 @@ public class ApiException extends RuntimeException {
     private void fillErrorCode(ErrorCodeInterface errorCode, Object... args) {
         this.errorCode = errorCode;
         this.message = StrUtil.format(errorCode.message(), args);
-//        try {
-//            this.i18nMessage = MessageUtils.message(errorCode.i18nKey(), args);
-//        } catch (Exception e) {
-//            log.error("could not found i18nMessage entry for key: " + errorCode.i18nKey());
-//        }
     }
-
     @Override
     public String getMessage() {
         return message;
     }
-//    @Override
-//    public String getLocalizedMessage() {
-//        return i18nMessage != null ? i18nMessage : message;
-//    }
+
 
 }

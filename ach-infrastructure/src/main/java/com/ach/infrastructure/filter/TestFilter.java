@@ -7,8 +7,6 @@ import java.io.IOException;
 
 /**
  * 过滤器模板代码
- *
- * @author valarchie
  */
 public class TestFilter implements Filter {
 

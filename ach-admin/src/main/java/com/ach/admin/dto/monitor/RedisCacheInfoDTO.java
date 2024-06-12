@@ -7,7 +7,7 @@ import java.util.Properties;
 
 
 /**
- * @author valarchie
+ *
  */
 @Data
 public class RedisCacheInfoDTO {

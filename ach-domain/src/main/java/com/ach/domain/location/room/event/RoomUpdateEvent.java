@@ -1,7 +1,6 @@
 package com.ach.domain.location.room.event;
 
 import com.ach.domain.DomainEvent;
-import jakarta.validation.constraints.*;
 import lombok.Data;
 
 @Data
@@ -11,5 +10,5 @@ public class RoomUpdateEvent implements DomainEvent {
     private Integer locationId;
     private String remark;
     private Integer roomSort;
-    private Boolean isChangeLocation;
+    private Boolean isChangeLocation;//是否改变了位置
 }

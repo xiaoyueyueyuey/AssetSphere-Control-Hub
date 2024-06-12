@@ -1,7 +1,7 @@
 package com.ach.infrastructure.cache.aop;
 
 /**
- * @author valarchie
+ * 
  */
 public class CacheNameConstants {
 

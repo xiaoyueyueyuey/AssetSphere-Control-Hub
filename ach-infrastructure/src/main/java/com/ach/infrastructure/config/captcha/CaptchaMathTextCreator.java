@@ -7,7 +7,7 @@ import com.google.code.kaptcha.text.impl.DefaultTextCreator;
 /**
  * verification code of math Generator
  *
- * @author valarchie
+ *
  */
 public class CaptchaMathTextCreator extends DefaultTextCreator {
 

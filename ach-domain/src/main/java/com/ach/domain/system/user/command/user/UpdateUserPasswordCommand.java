@@ -5,7 +5,7 @@ import com.ach.domain.Command;
 import lombok.Data;
 
 /**
- * @author valarchie
+ * 
  */
 @Data
 public class UpdateUserPasswordCommand implements Command {

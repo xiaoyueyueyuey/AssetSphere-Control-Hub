@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 部门表 Mapper 接口
  * </p>
  *
- * @author valarchie
+ * 
  * @since 2022-06-16
  */
 @Mapper

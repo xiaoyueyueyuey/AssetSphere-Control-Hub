@@ -12,7 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * 系统访问记录 服务类
  * </p>
  *
- * @author valarchie
+ * 
  * @since 2022-06-06
  */
 public interface SysLoginInfoService extends IService<SysLoginInfoEntity> {

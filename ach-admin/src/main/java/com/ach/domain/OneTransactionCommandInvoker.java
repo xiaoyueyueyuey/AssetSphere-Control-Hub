@@ -15,7 +15,6 @@ import java.util.function.Function;
 @RequiredArgsConstructor
 public class OneTransactionCommandInvoker implements CommandInvoker {
     private final DomainEventDispatcher domainEventDispatcher;
-
     @Override
     public <T> T invoke(Function<EventQueue, T> run) {
         SimpleEventQueue simpleEventQueue = new SimpleEventQueue();

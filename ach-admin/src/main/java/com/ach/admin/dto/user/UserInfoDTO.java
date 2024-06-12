@@ -5,7 +5,7 @@ import com.ach.admin.dto.role.RoleDTO;
 import lombok.Data;
 
 /**
- * @author valarchie
+ *
  */
 @Data
 public class UserInfoDTO {

@@ -87,7 +87,7 @@ springdoc:
 
 # 项目相关配置
 xyboot:
-    # 文件基路径 示例（ Windows配置D:\agileboot，Linux配置 /home/agileboot）
+  # 文件基路径 示例（ Windows配置D:\xyboot，Linux配置 /home/xyboot）
     file-base-dir: D:\xyboot
     # 前端url请求转发前缀
     api-prefix: /dev-api

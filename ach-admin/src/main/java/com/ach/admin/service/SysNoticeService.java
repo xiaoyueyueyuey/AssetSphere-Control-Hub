@@ -14,7 +14,7 @@ import org.springframework.data.repository.query.Param;
  * 通知公告表 服务类
  * </p>
  *
- * @author valarchie
+ * 
  * @since 2022-06-16
  */
 public interface SysNoticeService extends IService<SysNoticeEntity> {

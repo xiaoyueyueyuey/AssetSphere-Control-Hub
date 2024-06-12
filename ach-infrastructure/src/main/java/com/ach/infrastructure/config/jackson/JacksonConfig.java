@@ -8,7 +8,7 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import java.util.TimeZone;
 
 /**
- * @author valarchie
+ * 
  */
 @Configuration
 public class JacksonConfig implements Jackson2ObjectMapperBuilderCustomizer {

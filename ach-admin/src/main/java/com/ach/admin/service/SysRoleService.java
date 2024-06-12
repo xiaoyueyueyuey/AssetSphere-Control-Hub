@@ -17,7 +17,7 @@ import java.util.List;
  * 角色信息表 服务类
  * </p>
  *
- * @author valarchie
+ *
  * @since 2022-06-16
  */
 public interface SysRoleService extends IService<SysRoleEntity> {

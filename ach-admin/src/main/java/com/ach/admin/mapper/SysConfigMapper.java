@@ -13,7 +13,7 @@ import java.util.Set;
  * 参数配置表 Mapper 接口
  * </p>
  *
- * @author valarchie
+ *
  * @since 2022-06-09
  */
 @Mapper
