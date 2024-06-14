@@ -35,7 +35,7 @@ public class AssetLendingRecordEntity implements Serializable {
     /**
      * 借出时间
      */
-    private LocalDate loanTime;
+    private LocalDate lendingTime;
 
     /**
      * 归还时间

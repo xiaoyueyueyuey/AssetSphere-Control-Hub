@@ -12,7 +12,6 @@ import lombok.EqualsAndHashCode;
 public class ARQuery extends AbstractPageQuery<AssetReceiptRecordEntity> {
     private String assetName;
 
-
     @Override
     public QueryWrapper<AssetReceiptRecordEntity> addQueryCondition() {
         QueryWrapper<AssetReceiptRecordEntity> queryWrapper = new QueryWrapper<>();

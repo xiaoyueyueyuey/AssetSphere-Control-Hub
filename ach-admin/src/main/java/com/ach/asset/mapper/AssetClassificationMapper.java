@@ -1,8 +1,11 @@
 package com.ach.asset.mapper;
 
 import com.ach.asset.entity.AssetClassificationEntity;
+import com.ach.asset.vo.ACIdAndNameVO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * <p>
@@ -15,4 +18,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface AssetClassificationMapper extends BaseMapper<AssetClassificationEntity> {
 
+    List<ACIdAndNameVO> selectACList();
 }

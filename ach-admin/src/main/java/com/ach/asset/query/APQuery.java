@@ -8,6 +8,6 @@ public class APQuery {
     private Long userId;
     private String userName;
     private Boolean procurementStatus;
-    private Integer pageNum;
-    private Integer pageSize;
+    public Integer pageNum;
+    public Integer pageSize;
 }

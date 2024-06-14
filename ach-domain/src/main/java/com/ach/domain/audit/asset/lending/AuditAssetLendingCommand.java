@@ -9,7 +9,6 @@ import lombok.Data;
 public class AuditAssetLendingCommand implements Command {
     @Positive
     private Long lendingId;
-    private String remark;
     @PositiveOrZero
     private Byte auditStatus;
 

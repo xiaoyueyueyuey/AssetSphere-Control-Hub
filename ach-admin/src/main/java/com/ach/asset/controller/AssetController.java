@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Validated
 @RequiredArgsConstructor
-@RequestMapping("/ach-admin/asset")
+@RequestMapping("/asset")
 public class AssetController {
     private final IAssetService assetService;
     private final CommandInvoker commandInvoker;

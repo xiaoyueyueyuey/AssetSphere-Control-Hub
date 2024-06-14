@@ -31,7 +31,6 @@ public class AssetProcurementRecordEntity implements Serializable {
      * 申请人
      */
     private Long userId;
-
     /**
      * 采购单价
      */

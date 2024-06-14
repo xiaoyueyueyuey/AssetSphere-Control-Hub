@@ -7,7 +7,8 @@ import java.time.LocalDateTime;
 
 @Data
 public class ARVO {
-    private String assetReceiptId;
+    private Long assetReceiptId;
+    private String acName;
     private String assetModel;
     private String assetName;
     private Long count;
@@ -16,9 +17,8 @@ public class ARVO {
     private LocalDateTime updateTime;
     private String roomName;
     private String creator;
-    private BigDecimal unitPrice;
-    private BigDecimal totalPrice;
-    private String acName;
+    private BigDecimal unitMoney;
+    private BigDecimal totalMoney;
 
 
 }

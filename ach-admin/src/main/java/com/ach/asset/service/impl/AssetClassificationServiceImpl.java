@@ -5,6 +5,7 @@ import com.ach.asset.entity.AssetClassificationEntity;
 import com.ach.asset.mapper.AssetClassificationMapper;
 import com.ach.asset.query.ACQuery;
 import com.ach.asset.service.IAssetClassificationService;
+import com.ach.asset.vo.ACIdAndNameVO;
 import com.ach.asset.vo.ACVO;
 import com.ach.infrastructure.page.PageCustomDTO;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -29,5 +30,11 @@ public class AssetClassificationServiceImpl extends ServiceImpl<AssetClassificat
         Page<AssetClassificationEntity> page = this.page(query.toPage(), query.toQueryWrapper());
         List<ACVO> list = page.getRecords().stream().map(ACVO::new).toList();
         return new PageCustomDTO<>(list, page.getTotal());
+    }
+
+    @Override
+    public List<ACIdAndNameVO> getACList() {
+
+        return this.baseMapper.selectACList();
     }
 }

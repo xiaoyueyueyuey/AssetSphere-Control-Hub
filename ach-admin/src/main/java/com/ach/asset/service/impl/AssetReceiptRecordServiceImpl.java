@@ -8,6 +8,7 @@ import com.ach.asset.query.ARQuery;
 import com.ach.asset.service.IAssetReceiptRecordService;
 import com.ach.asset.vo.ARVO;
 import com.ach.infrastructure.page.PageCustomDTO;
+import com.ach.location.entity.AssetStorageRoomEntity;
 import com.ach.location.mapper.AssetStorageRoomMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -45,7 +46,8 @@ public class AssetReceiptRecordServiceImpl extends ServiceImpl<AssetReceiptRecor
         records.forEach(record -> {
             Integer roomId = record.getRoomId();
             if (!roomMap.containsKey(roomId)) {
-                roomMap.put(roomId, roomMapper.selectById(roomId).getRoomName());
+                AssetStorageRoomEntity assetStorageRoomEntity = roomMapper.selectById(roomId);
+                roomMap.put(roomId, assetStorageRoomEntity.getLocationName() + "-" + assetStorageRoomEntity.getRoomName());
             }
             Long userId = record.getCreatorId();
             if (!userMap.containsKey(userId)) {
@@ -56,7 +58,6 @@ public class AssetReceiptRecordServiceImpl extends ServiceImpl<AssetReceiptRecor
                 assetTypeMap.put(acId, acMapper.selectById(acId).getAcName());
             }
         });
-
         // 映射 入库人，房间名称，资产类别
         List<ARVO> list = page.getRecords().stream().map(
                 record -> {

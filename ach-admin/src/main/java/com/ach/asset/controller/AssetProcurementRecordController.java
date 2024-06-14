@@ -40,6 +40,7 @@ public class AssetProcurementRecordController {
 
     @GetMapping
     public BaseResponseData<PageCustomDTO<ARVO>> getAPNav(APQuery query) {
+        System.out.println("APQuery" + query);
         return BaseResponseData.ok(service.getAPNav(query));
     }
 

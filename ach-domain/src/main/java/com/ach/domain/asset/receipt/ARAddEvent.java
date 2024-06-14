@@ -13,7 +13,7 @@ public class ARAddEvent implements DomainEvent {
     private Long count;//数量
     private Integer roomId;
     private String remark;
-    private BigDecimal unitPrice;
-    private BigDecimal totalPrice;
+    private BigDecimal unitMoney;
+    private BigDecimal totalMoney;
     private Integer acId;
 }

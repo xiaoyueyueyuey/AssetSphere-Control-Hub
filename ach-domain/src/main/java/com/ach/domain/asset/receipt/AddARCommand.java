@@ -20,9 +20,9 @@ public class AddARCommand implements Command {
     private Integer roomId;
     private String remark;
     @PositiveOrZero
-    private BigDecimal unitPrice;
+    private BigDecimal unitMoney;
     @PositiveOrZero
-    private BigDecimal totalPrice;
+    private BigDecimal totalMoney;
 
     @Positive
     private Integer acId;

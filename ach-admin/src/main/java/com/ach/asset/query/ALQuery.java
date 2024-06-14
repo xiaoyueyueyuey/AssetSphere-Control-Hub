@@ -4,8 +4,7 @@ import lombok.Data;
 
 
 @Data
-public class AssetLendingQuery {
-    private Long userId;
+public class ALQuery {
     private String userName;
     private Boolean returnStatus;
     private Byte auditStatus;

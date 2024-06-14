@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class ACUpdateEvent implements DomainEvent {
+    private Integer acId;
     private String acName;
     private String remark;
     private Integer sort;

@@ -33,11 +33,8 @@ public class AssetReceiptRecordController {
     public BaseResponseData<PageCustomDTO<ARVO>> getARNav(ARQuery query) {
         return BaseResponseData.ok(arService.getARNav(query));
     }
-
     @PostMapping()
     public BaseResponseData<Void> addAR(@RequestBody AddARCommand arCommand) {
-
-
         commandInvoker.execute(addARCommandHandler, arCommand);
         return BaseResponseData.ok();
     }

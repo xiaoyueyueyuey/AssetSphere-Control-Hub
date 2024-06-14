@@ -8,10 +8,12 @@ import com.ach.asset.mapper.AssetReceiptRecordMapper;
 import com.ach.domain.DomainEvent;
 import com.ach.domain.DomainEventListener;
 import com.ach.domain.asset.receipt.ARAddEvent;
+import com.ach.infrastructure.user.AuthenticationUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -37,6 +39,7 @@ public class ARMaterialize implements DomainEventListener {
 
     private void addAR(ARAddEvent event) {
         AssetReceiptRecordEntity assetReceiptRecordEntity = new AssetReceiptRecordEntity();
+        assetReceiptRecordEntity.setCreatorId(AuthenticationUtils.getUserId());
         BeanUtils.copyProperties(event, assetReceiptRecordEntity);
         int insert = receiptMapper.insert(assetReceiptRecordEntity);
         if (insert > 0) {
@@ -54,7 +57,7 @@ public class ARMaterialize implements DomainEventListener {
                 assetEntity.setRoomId(event.getRoomId());
                 assets.add(assetEntity);
             }
-            assetMapper.batchInsert(assets);
+            assetMapper.batchInsert(assets, LocalDateTime.now());
         }
 
     }

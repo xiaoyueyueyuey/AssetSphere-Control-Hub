@@ -1,10 +1,7 @@
 package com.ach.asset.entity;
 
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -26,14 +23,10 @@ public class AssetEntity implements Serializable {
 
     @TableId("asset_id")
     private Long assetId;
-
     private Integer acId;
-
     private String acName;
 
     private String assetName;
-
-
 
     private String assetNumber;
 
@@ -50,6 +43,7 @@ public class AssetEntity implements Serializable {
     @TableField(fill = FieldFill.INSERT)
     private Byte status;
     @TableField(fill = FieldFill.INSERT)
+    @TableLogic
     private Boolean deleted;
 
 }

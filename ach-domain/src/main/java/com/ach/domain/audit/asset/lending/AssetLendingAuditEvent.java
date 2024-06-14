@@ -6,7 +6,6 @@ import lombok.Data;
 @Data
 public class AssetLendingAuditEvent implements DomainEvent {
     private Long lendingId;
-    private String remark;
     private Byte auditStatus;
 
 }

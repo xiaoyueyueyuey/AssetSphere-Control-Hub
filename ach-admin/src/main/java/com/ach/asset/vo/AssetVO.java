@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 public class AssetVO {
     private Long assetId;
     private Integer acId;
+    private String assetNumber;
     private String acName;
     private String assetName;
     private String assetModel;

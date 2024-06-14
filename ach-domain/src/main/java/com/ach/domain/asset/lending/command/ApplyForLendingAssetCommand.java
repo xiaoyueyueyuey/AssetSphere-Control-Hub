@@ -11,13 +11,10 @@ import java.time.LocalDate;
 public class ApplyForLendingAssetCommand implements Command {
 
     @Positive
-    private Long userId;
-
-    @Positive
     private Long assetId;
 
     @FutureOrPresent
-    private LocalDate loanTime;
+    private LocalDate lendingTime;
 
     @FutureOrPresent
     private LocalDate returnTime;

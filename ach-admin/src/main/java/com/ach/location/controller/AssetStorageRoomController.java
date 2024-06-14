@@ -20,6 +20,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * <p>
  * 前端控制器
@@ -46,6 +48,12 @@ public class AssetStorageRoomController {
     public BaseResponseData<PageCustomDTO<RoomVO>> getRoomNav(RoomQuery query) {
         PageCustomDTO<RoomVO> page = roomService.getRoomNav(query);
         return BaseResponseData.ok(page);
+    }
+
+    @GetMapping("/tree")
+    public BaseResponseData<List<RoomVO>> getLocationAndRoomTree() {
+        List<RoomVO> locationAndRoomTree = roomService.getLocationAndRoomTree();
+        return BaseResponseData.ok(locationAndRoomTree);
     }
 
     @DeleteMapping("/{roomId}")

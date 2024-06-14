@@ -7,9 +7,8 @@ import java.time.LocalDate;
 
 @Data
 public class AssetApplyForLendingEvent implements DomainEvent {
-    private Long userId;
     private Long assetId;
-    private LocalDate loanTime;
+    private LocalDate lendingTime;
     private LocalDate returnTime;
     private String remark;
 }

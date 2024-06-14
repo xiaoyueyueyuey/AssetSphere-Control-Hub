@@ -29,10 +29,8 @@ public class AssetClassificationModel {
         return true;
     }
     public Boolean handle(EventQueue eventQueue, UpdateACCommand command) {
-
         checkModelIsExist();
         checkNameIsUnique();
-
         ACUpdateEvent acUpdateEvent = new ACUpdateEvent();
         BeanUtils.copyProperties(command, acUpdateEvent);
         eventQueue.enqueue(acUpdateEvent);
@@ -42,10 +40,10 @@ public class AssetClassificationModel {
     public Boolean handle(EventQueue eventQueue, ChangeACStatusCommand command) {
 
         checkModelIsExist();
-
-        ACStatusChangeEvent acStatusChangeEvent = new ACStatusChangeEvent();
-        BeanUtils.copyProperties(command, acStatusChangeEvent);
-        eventQueue.enqueue(acStatusChangeEvent);
+        ACStatusChangeEvent event = new ACStatusChangeEvent();
+        BeanUtils.copyProperties(command, event);
+        event.setStatus(!status);
+        eventQueue.enqueue(event);
         return true;
     }
 

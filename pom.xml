@@ -21,7 +21,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <hutool.version>5.8.22</hutool.version>
         <lombok.version>1.18.26</lombok.version>
-        <druid.version>1.1.20</druid.version>
+        <druid.version>1.2.18</druid.version>
         <mybatis.springboot.version>3.0.2</mybatis.springboot.version>
         <!--        <mybatisPlus.version>3.5.5</mybatisPlus.version>-->
         <bitwalker.version>1.21</bitwalker.version>

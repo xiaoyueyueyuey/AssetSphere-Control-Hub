@@ -18,7 +18,6 @@ xyboot:
   # 是否检查 i18n 资源文件（messages.properties）是否都有对应的键值对
   #  checkI18nKey: false
   traceRequestIdKey: XY-RequestId
-
 ## 开发环境配置
 #server:
 #  # 服务器的HTTP端口，默认为8080

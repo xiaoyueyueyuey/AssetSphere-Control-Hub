@@ -10,5 +10,4 @@ public class ChangeAssetStatusCommand implements Command {
     private Long assetId;
     @PositiveOrZero
     private Byte status;
-
 }

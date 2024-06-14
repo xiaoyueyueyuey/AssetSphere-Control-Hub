@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
-public class AssetLendingVO {
+public class ALVO {
     private Long lendingId;
     private Long userId;
     private String userName;
@@ -20,7 +20,6 @@ public class AssetLendingVO {
     private String remark;
     private Byte auditStatus;
     private Boolean returnStatus;
-    private String auditRemark;
     private LocalDateTime auditTime;
     private String auditUserName;
 }

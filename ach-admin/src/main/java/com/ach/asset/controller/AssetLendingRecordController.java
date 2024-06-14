@@ -1,8 +1,8 @@
 package com.ach.asset.controller;
 
-import com.ach.asset.query.AssetLendingQuery;
+import com.ach.asset.query.ALQuery;
 import com.ach.asset.service.IAssetLendingRecordService;
-import com.ach.asset.vo.AssetLendingVO;
+import com.ach.asset.vo.ALVO;
 import com.ach.common.base.BaseResponseData;
 import com.ach.domain.CommandInvoker;
 import com.ach.domain.asset.lending.command.ApplyForLendingAssetCommand;
@@ -37,7 +37,8 @@ public class AssetLendingRecordController {
     private final IAssetLendingRecordService assetLendingRecordService;
 
     @GetMapping
-    public BaseResponseData<PageCustomDTO<AssetLendingVO>> getALNav(AssetLendingQuery query) {
+    public BaseResponseData<PageCustomDTO<ALVO>> getALNav(ALQuery query) {
+        System.out.println("query = " + query);
         return BaseResponseData.ok(assetLendingRecordService.getALNav(query));
     }
 

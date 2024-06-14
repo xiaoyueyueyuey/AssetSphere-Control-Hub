@@ -33,7 +33,6 @@ public class AssetLendingAuditMaterialize implements DomainEventListener {
         assetLendingRecordMapper.updateById(assetLendingRecordEntity);
         AssetLendingAuditEntity assetLendingAuditEntity = new AssetLendingAuditEntity();
         assetLendingAuditEntity.setLendingId(event.getLendingId());
-        assetLendingAuditEntity.setRemark(event.getRemark());
         assetLendingAuditEntity.setAuditUserId(AuthenticationUtils.getUserId());
         assetLendingAuditEntity.setAuditTime(LocalDateTime.now());
         assetLendingAuditMapper.updateById(assetLendingAuditEntity);

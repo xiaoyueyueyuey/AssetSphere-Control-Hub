@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * MP自动填充配置
@@ -21,10 +22,13 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         this.strictInsertFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
         this.strictInsertFill(metaObject, "createTime", LocalDate::now, LocalDate.class);
         this.strictInsertFill(metaObject, "updateTime", LocalDate::now, LocalDate.class);
+        this.strictInsertFill(metaObject, "createTime", Date::new, Date.class);
+        this.strictInsertFill(metaObject, "updateTime", Date::new, Date.class);
         this.strictInsertFill(metaObject, "status", () -> false, Boolean.class);
         this.strictInsertFill(metaObject, "status", () -> (short) 0, Short.class);
         this.strictInsertFill(metaObject, "status", () -> (byte) 0, Byte.class);
         this.strictInsertFill(metaObject, "deleted", () -> false, Boolean.class);
+        this.strictInsertFill(metaObject, "deleted", () -> (byte) 0, Byte.class);
         this.strictInsertFill(metaObject, "remark", () -> "", String.class);
     }
 

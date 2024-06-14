@@ -10,6 +10,7 @@ import com.ach.domain.asset.lending.AssetDomainService;
 import com.ach.domain.asset.lending.event.AssetApplyForLendingEvent;
 import com.ach.domain.asset.lending.event.AssetLendingCancelEvent;
 import com.ach.domain.asset.lending.event.AssetReturnEvent;
+import com.ach.infrastructure.user.AuthenticationUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
@@ -54,9 +55,10 @@ public class AssetLendingMaterialize implements DomainEventListener {
     private void applyForLending(AssetApplyForLendingEvent event) {
         AssetLendingRecordEntity assetLendingRecordEntity = new AssetLendingRecordEntity();
         assetLendingRecordEntity.setAuditStatus((byte) 0);
+        assetLendingRecordEntity.setUserId(AuthenticationUtils.getUserId());
         BeanUtils.copyProperties(event, assetLendingRecordEntity);
         int insert = mapper.insert(assetLendingRecordEntity);
-        if (insert == 0) {
+        if (insert > 0) {
             //同步在审核表中插入一条数据
             Long lendingId = assetLendingRecordEntity.getLendingId();
             AssetLendingAuditEntity auditEntity = new AssetLendingAuditEntity();

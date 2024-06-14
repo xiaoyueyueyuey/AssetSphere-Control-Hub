@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Validated
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/audit/alAudit")
+@RequestMapping("/audit/al")
 public class AssetLendingAuditController {
     private final CommandInvoker commandInvoker;
     private final AuditAssetLendingCommandHandler handler;

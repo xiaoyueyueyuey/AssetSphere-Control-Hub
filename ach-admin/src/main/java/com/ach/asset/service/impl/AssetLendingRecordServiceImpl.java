@@ -2,9 +2,9 @@ package com.ach.asset.service.impl;
 
 import com.ach.asset.entity.AssetLendingRecordEntity;
 import com.ach.asset.mapper.AssetLendingRecordMapper;
-import com.ach.asset.query.AssetLendingQuery;
+import com.ach.asset.query.ALQuery;
 import com.ach.asset.service.IAssetLendingRecordService;
-import com.ach.asset.vo.AssetLendingVO;
+import com.ach.asset.vo.ALVO;
 import com.ach.infrastructure.page.PageCustomDTO;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -24,10 +24,10 @@ import org.springframework.stereotype.Service;
 public class AssetLendingRecordServiceImpl extends ServiceImpl<AssetLendingRecordMapper, AssetLendingRecordEntity> implements IAssetLendingRecordService {
 
     @Override
-    public PageCustomDTO<AssetLendingVO> getALNav(AssetLendingQuery query) {
+    public PageCustomDTO<ALVO> getALNav(ALQuery query) {
 
-        Page<AssetLendingVO> page = new Page<>(query.getPageSize(), query.getPageNum());
-        this.baseMapper.selectALNav(page, query.getUserId(), query.getUserName(), query.getReturnStatus(), query.getAuditStatus());
+        Page<ALVO> page = new Page<>(query.getPageNum(), query.getPageSize());
+        this.baseMapper.selectALNav(page, query.getUserName(), query.getReturnStatus(), query.getAuditStatus());
 
         return new PageCustomDTO<>(page.getRecords(), page.getTotal());
 

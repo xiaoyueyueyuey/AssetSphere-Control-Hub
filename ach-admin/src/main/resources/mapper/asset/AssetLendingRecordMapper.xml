@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ach.asset.mapper.AssetLendingRecordMapper">
-    <resultMap id="ALVO" type="com.ach.asset.vo.AssetLendingVO">
+    <resultMap id="ALVO" type="com.ach.asset.vo.ALVO">
         <id column="lending_id" property="lendingId"/>
         <result column="user_id" property="userId"/>
-        <result column="user_name" property="userName"/>
+        <result column="username" property="userName"/>
         <result column="asset_id" property="assetId"/>
         <result column="asset_name" property="assetName"/>
-        <result column="assetModel" property="assetModel"/>
+        <result column="asset_model" property="assetModel"/>
         <result column="lending_time" property="lendingTime"/>
         <result column="return_time" property="returnTime"/>
         <result column="create_time" property="createTime"/>
@@ -15,14 +15,10 @@
         <result column="remark" property="remark"/>
         <result column="audit_status" property="auditStatus"/>
         <result column="return_status" property="returnStatus"/>
-        <result column="audit_remark" property="auditRemark"/>
         <result column="audit_time" property="auditTime"/>
         <result column="audit_username" property="auditUserName"/>
-
-
     </resultMap>
-
-    <select id="selectALNav" resultType="com.ach.asset.vo.AssetLendingVO">
+    <select id="selectALNav" resultMap="ALVO">
         SELECT al.lending_id,
         al.user_id,
         u.username,
@@ -36,7 +32,6 @@
         al.remark,
         al.audit_status,
         al.return_status,
-        ala.remark as audit_remark,
         ala.audit_time,
         au.username as audit_username
         FROM asset_lending_record al
@@ -45,10 +40,7 @@
         LEFT JOIN asset_lending_audit ala ON al.lending_id = ala.lending_id
         LEFT JOIN sys_user au ON ala.audit_user_id = au.user_id
         WHERE al.deleted=0
-        <if test="userId != null">
-            AND al.user_id = #{userId}
-        </if>
-        <if test="userName != null">
+        <if test="userName != null and userName != ''">
             AND u.username like concat('%',#{userName},'%')
         </if>
         <if test="returnStatus != null">

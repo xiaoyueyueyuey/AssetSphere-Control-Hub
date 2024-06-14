@@ -1,7 +1,6 @@
 package com.ach.audit.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -35,7 +34,9 @@ public class AssetLendingAuditEntity implements Serializable {
     /**
      * 逻辑删除
      */
-    private Byte deleted;
+    @TableLogic
+    @TableField(fill = FieldFill.INSERT)
+    private Boolean deleted;
 
     /**
      * 审核时间
