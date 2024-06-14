@@ -2,7 +2,7 @@ package com.ach.asset.mapper;
 
 
 import com.ach.asset.entity.AssetProcurementRecordEntity;
-import com.ach.asset.vo.ARVO;
+import com.ach.asset.vo.APVO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Mapper;
@@ -20,7 +20,7 @@ import org.apache.ibatis.annotations.Param;
 
 public interface AssetProcurementRecordMapper extends BaseMapper<AssetProcurementRecordEntity> {
 
-    Page<ARVO> selectAPNav(@Param("page") Page<ARVO> page,
-                           @Param("userId") Long userId, @Param("userName") String userName,
-                           @Param("procurementStatus") Boolean procurementStatus);
+    Page<APVO> selectAPNav(@Param("page") Page<APVO> page,
+                           @Param("userName") String userName,
+                           @Param("procurementStatus") Boolean procurementStatus, @Param("auditStatus") Byte auditStatus);
 }

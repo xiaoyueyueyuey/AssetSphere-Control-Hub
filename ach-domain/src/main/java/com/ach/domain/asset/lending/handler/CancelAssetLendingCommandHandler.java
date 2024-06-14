@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class CancelAssetLendingCommandHandler implements CommandHandler<CancelAssetLendingCommand> {
     private final AssetLendingRepository repository;
-
     @Override
     public Boolean handle(EventQueue eventQueue, CancelAssetLendingCommand command) {
         AssetLendingModel model = repository.findByIdOrError(command.getLendingId());

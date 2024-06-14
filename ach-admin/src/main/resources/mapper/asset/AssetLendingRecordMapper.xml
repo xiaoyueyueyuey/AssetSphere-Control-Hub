@@ -39,10 +39,37 @@
         LEFT JOIN sys_user u ON al.user_id = u.user_id
         LEFT JOIN asset_lending_audit ala ON al.lending_id = ala.lending_id
         LEFT JOIN sys_user au ON ala.audit_user_id = au.user_id
-        WHERE al.deleted=0
+        WHERE al.deleted=0 AND al.status=0
         <if test="userName != null and userName != ''">
             AND u.username like concat('%',#{userName},'%')
         </if>
+        <if test="returnStatus != null">
+            AND al.return_status = #{returnStatus}
+        </if>
+        <if test="auditStatus != null">
+            AND al.audit_status = #{auditStatus}
+        </if>
+    </select>
+    <select id="selectSelfALNav" resultMap="ALVO">
+        SELECT al.lending_id,
+        al.asset_id,
+        a.asset_name,
+        a.asset_model,
+        al.lending_time,
+        al.return_time,
+        al.create_time,
+        al.update_time,
+        al.remark,
+        al.audit_status,
+        al.return_status,
+        ala.audit_time,
+        au.username as audit_username
+        FROM asset_lending_record al
+        LEFT JOIN asset a ON al.asset_id = a.asset_id
+        LEFT JOIN asset_lending_audit ala ON al.lending_id = ala.lending_id
+        LEFT JOIN sys_user au ON ala.audit_user_id = au.user_id
+        WHERE al.deleted=0
+        AND al.user_id = #{userId} AND al.status=0
         <if test="returnStatus != null">
             AND al.return_status = #{returnStatus}
         </if>

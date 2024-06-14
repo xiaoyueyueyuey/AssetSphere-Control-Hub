@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Validated
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/audit/assetProcurementAudit")
+@RequestMapping("/audit/ap")
 public class AssetProcurementAuditController {
     private final CommandInvoker commandInvoker;
     private final AuditAssetProcurementCommandHandler handler;

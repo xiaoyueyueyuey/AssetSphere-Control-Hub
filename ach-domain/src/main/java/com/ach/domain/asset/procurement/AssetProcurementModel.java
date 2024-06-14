@@ -44,7 +44,7 @@ public class AssetProcurementModel {
 
     private void checkCanChangeProcurementStatus() {
         //如果已经完成了，就不能再修改了
-        if (procurementStatus) {
+        if (procurementStatus != null && procurementStatus) {
             throw new ApiException(ErrorCode.Business.PROCUREMENT_HAS_BEEN_FINISHED);
         }
     }
@@ -56,7 +56,7 @@ public class AssetProcurementModel {
     }
 
     public void checkCanBeCancel() {
-        if (procurementStatus) {
+        if (procurementStatus != null && procurementStatus) {
             throw new ApiException(ErrorCode.Business.PROCUREMENT_HAS_BEEN_FINISHED);
         }
     }

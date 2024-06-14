@@ -18,9 +18,6 @@ public class CancelProcureAssetCommandHandler implements CommandHandler<CancelPr
     @Override
     public Boolean handle(EventQueue eventQueue, CancelProcureAssetCommand command) {
         AssetProcurementModel model = repository.findByIdOrError(command.getProcurementId());
-
         return model.handle(eventQueue, command);
-
-
     }
 }

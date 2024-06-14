@@ -5,9 +5,9 @@ import lombok.Data;
 
 @Data
 public class APQuery {
-    private Long userId;
     private String userName;
     private Boolean procurementStatus;
+    private Byte auditStatus;
     public Integer pageNum;
     public Integer pageSize;
 }

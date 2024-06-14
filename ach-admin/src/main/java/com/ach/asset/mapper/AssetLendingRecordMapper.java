@@ -22,4 +22,9 @@ public interface AssetLendingRecordMapper extends BaseMapper<AssetLendingRecordE
     Page<ALVO> selectALNav(@Param("page") Page<ALVO> page, @Param("userName") String userName,
                            @Param("returnStatus") Boolean returnStatus,
                            @Param("auditStatus") Byte auditStatus);
+
+    Page<ALVO> selectSelfALNav(@Param("page") Page<ALVO> page,
+                               @Param("userId") Long userId,
+                               @Param("returnStatus") Boolean returnStatus,
+                               @Param("auditStatus") Byte auditStatus);
 }

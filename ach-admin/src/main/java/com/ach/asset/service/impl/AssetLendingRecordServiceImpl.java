@@ -6,6 +6,7 @@ import com.ach.asset.query.ALQuery;
 import com.ach.asset.service.IAssetLendingRecordService;
 import com.ach.asset.vo.ALVO;
 import com.ach.infrastructure.page.PageCustomDTO;
+import com.ach.infrastructure.user.AuthenticationUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.RequiredArgsConstructor;
@@ -25,12 +26,15 @@ public class AssetLendingRecordServiceImpl extends ServiceImpl<AssetLendingRecor
 
     @Override
     public PageCustomDTO<ALVO> getALNav(ALQuery query) {
-
         Page<ALVO> page = new Page<>(query.getPageNum(), query.getPageSize());
         this.baseMapper.selectALNav(page, query.getUserName(), query.getReturnStatus(), query.getAuditStatus());
-
         return new PageCustomDTO<>(page.getRecords(), page.getTotal());
+    }
 
-
+    @Override
+    public PageCustomDTO<ALVO> getSelfALNav(ALQuery query) {
+        Page<ALVO> page = new Page<>(query.getPageNum(), query.getPageSize());
+        this.baseMapper.selectSelfALNav(page, AuthenticationUtils.getUserId(), query.getReturnStatus(), query.getAuditStatus());
+        return new PageCustomDTO<>(page.getRecords(), page.getTotal());
     }
 }

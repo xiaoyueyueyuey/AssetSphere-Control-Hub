@@ -9,6 +9,7 @@ import com.ach.domain.DomainEventListener;
 import com.ach.domain.asset.lending.AssetDomainService;
 import com.ach.domain.asset.lending.event.AssetApplyForLendingEvent;
 import com.ach.domain.asset.lending.event.AssetLendingCancelEvent;
+import com.ach.domain.asset.lending.event.AssetLentOutEvent;
 import com.ach.domain.asset.lending.event.AssetReturnEvent;
 import com.ach.infrastructure.user.AuthenticationUtils;
 import lombok.RequiredArgsConstructor;
@@ -30,7 +31,22 @@ public class AssetLendingMaterialize implements DomainEventListener {
             cancelLending((AssetLendingCancelEvent) event);
         } else if (event instanceof AssetReturnEvent) {
             returnAsset((AssetReturnEvent) event);
+        } else if (event instanceof AssetLentOutEvent) {
+            lentOutAsset((AssetLentOutEvent) event);
         }
+    }
+
+    private void lentOutAsset(AssetLentOutEvent event) {
+        AssetLendingRecordEntity assetLendingRecordEntity = new AssetLendingRecordEntity();
+        assetLendingRecordEntity.setLendingId(event.getLendingId());
+        assetLendingRecordEntity.setReturnStatus(false);
+        int i = mapper.updateById(assetLendingRecordEntity);
+        if (i > 0) {
+            //把资产状态改为借出状态
+            assetDomainService.lentOutAsset(event.getAssetId());
+        }
+
+
     }
 
     private void returnAsset(AssetReturnEvent event) {
@@ -38,8 +54,8 @@ public class AssetLendingMaterialize implements DomainEventListener {
         assetLendingRecordEntity.setLendingId(event.getLendingId());
         assetLendingRecordEntity.setReturnStatus(true);//已归还，修改状态
         int updated = mapper.updateById(assetLendingRecordEntity);
-        if (updated == 0) {
-            //更新失败
+        if (updated > 0) {
+            //把资产状态改为空间状态
             assetDomainService.returnAsset(event.getAssetId());
         }
 

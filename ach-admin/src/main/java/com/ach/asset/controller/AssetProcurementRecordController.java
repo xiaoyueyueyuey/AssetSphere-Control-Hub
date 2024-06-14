@@ -2,7 +2,7 @@ package com.ach.asset.controller;
 
 import com.ach.asset.query.APQuery;
 import com.ach.asset.service.IAssetProcurementRecordService;
-import com.ach.asset.vo.ARVO;
+import com.ach.asset.vo.APVO;
 import com.ach.common.base.BaseResponseData;
 import com.ach.domain.CommandInvoker;
 import com.ach.domain.asset.procurement.command.ApplyForProcureAssetCommand;
@@ -39,26 +39,23 @@ public class AssetProcurementRecordController {
     public final CancelProcureAssetCommandHandler cancelProcureAssetCommandHandler;
 
     @GetMapping
-    public BaseResponseData<PageCustomDTO<ARVO>> getAPNav(APQuery query) {
-        System.out.println("APQuery" + query);
+    public BaseResponseData<PageCustomDTO<APVO>> getAPNav(APQuery query) {
+
         return BaseResponseData.ok(service.getAPNav(query));
     }
-
-
     @PostMapping
     public BaseResponseData<Void> applyForProcureAsset(@RequestBody ApplyForProcureAssetCommand command) {
         commandInvoker.execute(applyForProcureAssetCommandHandler, command);
         return BaseResponseData.ok();
     }
-
     @PutMapping("/{id}")
     public BaseResponseData<Void> cancelProcureAsset(@PathVariable("id") Long id) {
         CancelProcureAssetCommand cancelProcureAssetCommand = new CancelProcureAssetCommand();
         cancelProcureAssetCommand.setProcurementId(id);
+        System.out.println("状态" + cancelProcureAssetCommand.getProcurementId());
         commandInvoker.execute(cancelProcureAssetCommandHandler, cancelProcureAssetCommand);
         return BaseResponseData.ok();
     }
-
     @PutMapping("/status")
     public BaseResponseData<Void> changeAssetProcurementStatus(@RequestBody ChangeAssetProcurementStatusCommand command) {
         commandInvoker.execute(changeAssetProcurementStatusCommandHandler, command);

@@ -23,4 +23,12 @@ public class AssetDomainServiceImpl implements AssetDomainService {
         assetEntity.setStatus((byte) 0);
         assetMapper.updateById(assetEntity);
     }
+
+    @Override
+    public void lentOutAsset(Long assetId) {
+        AssetEntity assetEntity = new AssetEntity();
+        assetEntity.setAssetId(assetId);
+        assetEntity.setStatus((byte) 1);
+        assetMapper.updateById(assetEntity);
+    }
 }

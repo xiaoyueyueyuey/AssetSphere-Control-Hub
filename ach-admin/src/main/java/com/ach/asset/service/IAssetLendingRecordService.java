@@ -18,4 +18,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface IAssetLendingRecordService extends IService<AssetLendingRecordEntity> {
 
     PageCustomDTO<ALVO> getALNav(ALQuery query);
+
+    PageCustomDTO<ALVO> getSelfALNav(ALQuery query);
 }

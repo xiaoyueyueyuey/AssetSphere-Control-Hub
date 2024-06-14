@@ -18,7 +18,6 @@ public class APVO {
     private LocalDateTime updateTime;
     private Byte auditStatus;
     private Boolean status;
-    private String auditRemark;
     private LocalDateTime auditTime;
     private String auditUserName;
 

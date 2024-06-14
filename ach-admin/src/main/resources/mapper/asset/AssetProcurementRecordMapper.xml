@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ach.asset.mapper.AssetProcurementRecordMapper">
 
-    <select id="selectAPNav" resultType="com.ach.asset.vo.ARVO">
-        SELECT ap_procurement_id,
+    <select id="selectAPNav" resultType="com.ach.asset.vo.APVO">
+        SELECT ap.procurement_id,
         u.username,
         ap.remark,
         ap.count,
@@ -14,22 +14,21 @@
         ap.update_time,
         ap.audit_status,
         ap.status,
-        apa.remark as audit_remark,
         apa.audit_time,
         au.username as audit_username
         FROM asset_procurement_record ap
         LEFT JOIN sys_user u ON ap.user_id = u.user_id
-        LEFT JOIN asset_procurement_audit apa ON ap.ap_procurement_id = apa.ap_procurement_id
+        LEFT JOIN asset_procurement_audit apa ON ap.procurement_id = apa.procurement_id
         LEFT JOIN sys_user au ON apa.audit_user_id = au.user_id
-        WHERE ap.deleted = 0
-        <if test="userId != null">
-            AND ap.user_id = #{userId}
-        </if>
-        <if test="userName != null">
+        WHERE ap.deleted = 0 AND ap.status = 0
+        <if test="userName != null and userName != ''">
             AND u.username like concat('%',#{userName},'%')
         </if>
         <if test="procurementStatus != null">
             AND ap.procurement_status = #{procurementStatus}
+        </if>
+        <if test="auditStatus != null">
+            AND ap.audit_status = #{auditStatus}
         </if>
     </select>
 </mapper>
