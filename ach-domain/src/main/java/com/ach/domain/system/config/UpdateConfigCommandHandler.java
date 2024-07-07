@@ -16,7 +16,7 @@ public class UpdateConfigCommandHandler implements CommandHandler<UpdateConfigCo
         ConfigModel model = configRepository.findByIdOrError(Long.valueOf(command.getConfigId()));
         model.setConfigId(command.getConfigId());
         model.setConfigValue(command.getConfigValue());
-        model.setConfigOptionSet(configRepository.getConfigOptionSet(command.getConfigId()));
+        model.setConfigOptionSet(model.getConfigOptionSet());
         //聚合就不用保存了,事件会处理
         return model.handle(eventQueue, command);
     }

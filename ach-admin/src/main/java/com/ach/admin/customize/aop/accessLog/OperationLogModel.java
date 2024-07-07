@@ -46,7 +46,6 @@ public class OperationLogModel extends SysOperationLogEntity {
         }
         this.setOperationTime(DateUtil.date());
     }
-
     public void fillRequestInfo(final JoinPoint joinPoint, AccessLog accessLog, Object jsonResult) {
         this.setRequestUrl(request.getRequestURI());
         // 设置方法名称
@@ -58,8 +57,6 @@ public class OperationLogModel extends SysOperationLogEntity {
         RequestMethodEnum requestMethodEnum = EnumUtil.fromString(RequestMethodEnum.class,
                 request.getMethod());
         this.setRequestMethod(requestMethodEnum != null ? requestMethodEnum.getValue() : RequestMethodEnum.UNKNOWN.getValue());
-
-
         // 是否需要保存request，参数和值
         if (accessLog.isSaveRequestData()) {
             // 获取参数的信息，传入到数据库中。
@@ -70,8 +67,6 @@ public class OperationLogModel extends SysOperationLogEntity {
             this.setOperationResult(StrUtil.sub(JSONUtil.toJsonStr(jsonResult), 0, MAX_DATA_LENGTH));
         }
     }
-
-
     public void fillAccessLogInfo(AccessLog log) {
         // 设置action动作
         this.setBusinessType(log.businessType().ordinal());
@@ -80,7 +75,6 @@ public class OperationLogModel extends SysOperationLogEntity {
         // 设置操作人类别
         this.setOperatorType(log.operatorType().ordinal());
     }
-
 
     public void fillStatus(Exception e) {
         if (e != null) {

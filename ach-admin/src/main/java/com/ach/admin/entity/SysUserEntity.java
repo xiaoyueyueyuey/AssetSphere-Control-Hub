@@ -72,15 +72,12 @@ public class SysUserEntity extends BaseEntity<SysUserEntity> implements Serializ
     @Schema(description = "最后登录IP")
     @TableField("login_ip")
     private String loginIp;
-
     @Schema(description = "最后登录时间")
     @TableField("login_date")
     private Date loginDate;
-
     @Schema(description = "超级管理员标志（1是，0否）")
     @TableField("is_admin")
     private Boolean isAdmin;
-
     @Schema(description = "备注")
     @TableField("remark")
     private String remark;

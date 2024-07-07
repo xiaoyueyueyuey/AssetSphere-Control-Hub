@@ -1,7 +1,7 @@
 package com.ach.domain.system.menu;
 
 
-import com.ach.domain.common.Repository;
+import com.ach.domain.Repository;
 
 public interface MenuRepository extends Repository<MenuModel> {
     Boolean findByMenuNameOrError(String menuName);

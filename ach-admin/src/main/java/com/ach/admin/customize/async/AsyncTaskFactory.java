@@ -23,10 +23,8 @@ import org.springframework.beans.BeanUtils;
  */
 @Slf4j
 public class AsyncTaskFactory {
-
     private AsyncTaskFactory() {
     }
-
     /**
      * 记录登录信息,因为只有登录才会记录，所以不需要注解+AOP了
      *
@@ -35,7 +33,6 @@ public class AsyncTaskFactory {
      * @param message         消息
      * @return 任务task
      */
-
     public static Runnable loginInfoTask(final String username, final LoginStatusEnum loginStatusEnum, final String message) {
         // 优化一下这个类
         final UserAgent userAgent = UserAgent.parseUserAgentString(

@@ -1,7 +1,7 @@
 package com.ach.domain.system.post;
 
 
-import com.ach.domain.common.Repository;
+import com.ach.domain.Repository;
 
 public interface PostRepository extends Repository<PostModel> {
     Boolean checkPostNameUnique(String postName);

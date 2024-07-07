@@ -31,7 +31,6 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         this.strictInsertFill(metaObject, "deleted", () -> (byte) 0, Byte.class);
         this.strictInsertFill(metaObject, "remark", () -> "", String.class);
     }
-
     @Override
     public void updateFill(MetaObject metaObject) {
         log.info("start update fill ....");

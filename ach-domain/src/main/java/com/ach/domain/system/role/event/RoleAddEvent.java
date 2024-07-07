@@ -14,7 +14,7 @@ public class RoleAddEvent implements DomainEvent {
     private Integer roleSort;
     private String remark;
     private String dataScope;
-    private String status;
+    private Integer status;
     private List<Long> menuIds;
 
     public void setAggregateId(Long aggregateId) {

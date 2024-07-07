@@ -28,16 +28,19 @@ public class AssetProcurementAuditMaterialize implements DomainEventListener {
     }
 
     private void audit(AssetProcurementAuditEvent event) {
+        // 创建一个新的AssetProcurementRecordEntity实例，并设置采购ID和审核状态
         AssetProcurementRecordEntity assetProcurementRecordEntity = new AssetProcurementRecordEntity();
         assetProcurementRecordEntity.setProcurementId(event.getProcurementId());
         assetProcurementRecordEntity.setAuditStatus(event.getAuditStatus());
+        // 更新采购记录表中的记录
         apMapper.updateById(assetProcurementRecordEntity);
+        // 创建一个新的AssetProcurementAuditEntity实例，并设置采购ID、审核时间、审核用户ID和备注
         AssetProcurementAuditEntity assetProcurementAuditEntity = new AssetProcurementAuditEntity();
         assetProcurementAuditEntity.setProcurementId(event.getProcurementId());
         assetProcurementAuditEntity.setAuditTime(LocalDateTime.now());
         assetProcurementAuditEntity.setAuditUserId(AuthenticationUtils.getUserId());
         assetProcurementAuditEntity.setRemark(event.getRemark());
+        // 更新采购审核表中的记录
         apaMapper.updateById(assetProcurementAuditEntity);
-
     }
 }

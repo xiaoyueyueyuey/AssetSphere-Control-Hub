@@ -1,11 +1,14 @@
 package com.ach.admin.domain.repository;
 
+import com.ach.admin.entity.SysConfigEntity;
 import com.ach.admin.mapper.SysConfigMapper;
 import com.ach.domain.system.config.ConfigModel;
 import com.ach.domain.system.config.ConfigRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -17,7 +20,19 @@ public class ConfigRepositoryImpl implements ConfigRepository {
 
     @Override
     public ConfigModel findByIdOrError(Long id) {
-        return null;
+
+        SysConfigEntity sysConfigEntity = sysConfigMapper.selectById(id);
+
+        ConfigModel configModel = new ConfigModel();
+        configModel.setConfigId(Math.toIntExact(id));
+        String temp = sysConfigEntity.getConfigOptions().replaceAll("\\[|\\]|\"", "");
+        String[] split = temp.split(",");
+
+        Set<String> configOptionSet = new HashSet<>(Arrays.asList(split));
+        configModel.setConfigOptionSet(configOptionSet);
+        return configModel;
+
+
     }
 
     @Override

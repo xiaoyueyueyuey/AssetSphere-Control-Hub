@@ -1,7 +1,7 @@
 package com.ach.domain.system.user;
 
 
-import com.ach.domain.common.Repository;
+import com.ach.domain.Repository;
 
 public interface UserRepository extends Repository<UserModel> {
     Boolean checkUsernameIsUnique(String username);

@@ -1,7 +1,7 @@
 package com.ach.domain.system.config;
 
 
-import com.ach.domain.common.Repository;
+import com.ach.domain.Repository;
 
 import java.util.Set;
 

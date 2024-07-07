@@ -9,6 +9,7 @@ import com.ach.domain.system.user.event.manager.*;
 import com.ach.infrastructure.user.AuthenticationUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SysUserMaterialize implements DomainEventListener {
     private final SysUserMapper mapper;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public void onEvent(DomainEvent event) {
@@ -36,12 +38,16 @@ public class SysUserMaterialize implements DomainEventListener {
     }
 
     private void updateUserLoginIpAndTime(UserLoginIpAndTimeUpdateEvent event) {
+
         SysUserEntity sysUserEntity = new SysUserEntity();
         BeanUtils.copyProperties(event, sysUserEntity);
         mapper.updateById(sysUserEntity);
     }
 
     public void addSysUser(UserAddEvent event) {
+        String password = event.getPassword();
+        String encodePassword = passwordEncoder.encode(password);
+        event.setPassword(encodePassword);
         SysUserEntity sysUserEntity = new SysUserEntity();
         BeanUtils.copyProperties(event, sysUserEntity);
         int insert = mapper.insert(sysUserEntity);

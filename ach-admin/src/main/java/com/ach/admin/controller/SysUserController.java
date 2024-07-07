@@ -129,7 +129,7 @@ public class SysUserController extends BaseController {
      * 修改用户
      */
     @Operation(summary = "修改用户")
-    @PreAuthorize("@permission.has('system:user:edit') AND @dataScope.checkUserId(#command.userId)")
+//    @PreAuthorize("@permission.has('system:user:edit') AND @dataScope.checkUserId(#command.userId)")
     @AccessLog(title = "用户管理", businessType = BusinessTypeEnum.MODIFY)
     @PutMapping("/{userId}")
     public BaseResponseData<Void> edit(@Validated @RequestBody UpdateUserCommand command) {
@@ -147,7 +147,7 @@ public class SysUserController extends BaseController {
     @PreAuthorize("@permission.has('system:user:remove') AND @dataScope.checkUserIds(#userIds)")
     @AccessLog(title = "用户管理", businessType = BusinessTypeEnum.DELETE)
     @DeleteMapping("/{userIds}")
-    public BaseResponseData<Void> remove(@PathVariable List<Long> userIds) {
+    public BaseResponseData<Void> remove(@PathVariable("userIds") List<Long> userIds) {
 //        BulkOperationCommand<Long> bulkDeleteCommand = new BulkOperationCommand<>(userIds);
         DeleteUserCommand deleteUserCommand = new DeleteUserCommand();
         for (Long userId : userIds) {
@@ -158,7 +158,7 @@ public class SysUserController extends BaseController {
         return BaseResponseData.ok();
     }
 
-    /**F
+    /**
      * TODO重置密码,待区分用户端和管理端
      */
     @Operation(summary = "重置用户密码")

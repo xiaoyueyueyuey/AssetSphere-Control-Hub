@@ -1,4 +1,4 @@
-package com.ach.domain.common;
+package com.ach.domain;
 
 import java.util.List;
 

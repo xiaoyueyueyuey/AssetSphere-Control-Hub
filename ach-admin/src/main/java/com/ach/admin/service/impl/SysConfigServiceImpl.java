@@ -55,5 +55,4 @@ public class SysConfigServiceImpl extends ServiceImpl<SysConfigMapper, SysConfig
         return new ConfigDTO(byId);
     }
 
-
 }

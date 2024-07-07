@@ -69,7 +69,6 @@ public class SysRoleController extends BaseController {
         PageCustomDTO<RoleDTO> pageCustomDTO = new PageCustomDTO<>(records, page.getTotal());
         return BaseResponseData.ok(pageCustomDTO);
     }
-
     @Operation(summary = "角色列表导出")
     @AccessLog(title = "角色管理", businessType = BusinessTypeEnum.EXPORT)
     @PreAuthorize("@permission.has('system:role:export')")
@@ -87,7 +86,7 @@ public class SysRoleController extends BaseController {
     @Operation(summary = "角色详情")
     @PreAuthorize("@permission.has('system:role:query')")
     @GetMapping(value = "/{roleId}")
-    public BaseResponseData<RoleDTO> getInfo(@PathVariable @NotNull Long roleId) {
+    public BaseResponseData<RoleDTO> getInfo(@PathVariable("roleId") @NotNull Long roleId) {
         RoleDTO roleInfo = sysRoleService.getRoleInfo(roleId);
         return BaseResponseData.ok(roleInfo);
     }
@@ -96,10 +95,11 @@ public class SysRoleController extends BaseController {
      * 新增角色
      */
     @Operation(summary = "添加角色")
-    @PreAuthorize("@permission.has('system:role:add')")
+//    @PreAuthorize("@permission.has('system:role:add')")
     @AccessLog(title = "角色管理", businessType = BusinessTypeEnum.ADD)
     @PostMapping
     public BaseResponseData<Void> add(@RequestBody AddRoleCommand addCommand) {
+//        System.out.println("AddRoleCommand"+addCommand);
         Boolean execute = commandInvoker.execute(addRoleCommandHandler, addCommand);
         if (!execute) {
             return BaseResponseData.fail();

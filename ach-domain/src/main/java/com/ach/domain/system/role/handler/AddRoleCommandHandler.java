@@ -30,7 +30,7 @@ public class AddRoleCommandHandler implements CommandHandler<AddRoleCommand> {
         if (handle) {
             Long roleId = roleRepository.save(roleModel);
             eventQueue.queue().forEach(domainEvent -> domainEvent.setAggregateId(roleId));
-            return roleId > 0;
+            return true;
         }
         return false;
     }

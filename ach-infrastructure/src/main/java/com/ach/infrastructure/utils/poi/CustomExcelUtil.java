@@ -19,8 +19,6 @@ import java.util.List;
 
 /**
  * 自定义Excel 导入导出工具
- *
- * 
  */
 @Slf4j
 public class CustomExcelUtil {
@@ -46,19 +44,14 @@ public class CustomExcelUtil {
     }
 
     public static <T> void writeToOutputStream(List<T> list, Class<T> clazz, OutputStream outputStream) {
-
         // 通过工具类创建writer
         ExcelWriter writer = ExcelUtil.getWriter(true);
-
         ExcelSheet sheetAnno = clazz.getAnnotation(ExcelSheet.class);
-
         if (sheetAnno != null) {
             // 默认的sheetName是 sheet1
             writer.renameSheet(sheetAnno.name());
         }
-
         Field[] fields = clazz.getDeclaredFields();
-
         //自定义标题别名
         for (Field field : fields) {
             ExcelColumn annotation = field.getAnnotation(ExcelColumn.class);
@@ -66,10 +59,8 @@ public class CustomExcelUtil {
                 writer.addHeaderAlias(field.getName(), annotation.name());
             }
         }
-
         // 默认的，未添加alias的属性也会写出，如果想只写出加了别名的字段，可以调用此方法排除之
         writer.setOnlyAlias(true);
-
         // 合并单元格后的标题行，使用默认标题样式
         // writer.merge(4, "一班成绩单"); 一次性写出内容，使用默认样式，强制输出标题
         writer.write(list, true);

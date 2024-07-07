@@ -1,6 +1,5 @@
 package com.ach.admin.customize.aop.accessLog;
 
-
 import com.ach.common.enums.common.BusinessTypeEnum;
 import com.ach.common.enums.common.OperatorTypeEnum;
 
@@ -15,12 +14,10 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface AccessLog {
-
     /**
      * 模块
      */
     String title() default "";
-
     /**
      * 功能
      */
@@ -30,12 +27,10 @@ public @interface AccessLog {
      * 操作人类别
      */
     OperatorTypeEnum operatorType() default OperatorTypeEnum.WEB;
-
     /**
      * 是否保存请求的参数
      */
     boolean isSaveRequestData() default true;
-
     /**
      * 是否保存响应的参数
      */

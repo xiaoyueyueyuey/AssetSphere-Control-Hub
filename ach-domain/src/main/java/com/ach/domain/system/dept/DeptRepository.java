@@ -1,7 +1,7 @@
 package com.ach.domain.system.dept;
 
 
-import com.ach.domain.common.Repository;
+import com.ach.domain.Repository;
 
 public interface DeptRepository extends Repository<DeptModel> {
     Boolean checkDeptNameIsUnique(String deptName);

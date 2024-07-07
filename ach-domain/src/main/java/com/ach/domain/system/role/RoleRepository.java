@@ -1,7 +1,7 @@
 package com.ach.domain.system.role;
 
 
-import com.ach.domain.common.Repository;
+import com.ach.domain.Repository;
 
 public interface RoleRepository extends Repository<RoleModel> {
     Boolean checkRoleNameIsUnique(String roleName);

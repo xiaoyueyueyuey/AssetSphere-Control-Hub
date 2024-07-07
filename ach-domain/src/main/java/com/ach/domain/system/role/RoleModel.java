@@ -28,7 +28,6 @@ public class RoleModel {
             checkRoleKeyUnique();
         } catch (ApiException e) {
             eventQueue.enqueue(new RoleAddFailedEvent());
-
             return false;
         }
         RoleAddEvent roleAddEvent = new RoleAddEvent();
@@ -52,12 +51,11 @@ public class RoleModel {
 
     public Boolean handle(EventQueue eventQueue, UpdateRoleCommand command) {
         try {
-            checkRoleIsExist();
-            checkRoleNameUnique();
-            checkRoleKeyUnique();
+//            checkRoleIsExist();
+//            checkRoleNameUnique();
+//            checkRoleKeyUnique();
         } catch (ApiException e) {
             eventQueue.enqueue(new RoleUpdateFailedEvent());
-
             return false;
         }
         RoleUpdateEvent roleUpdateEvent = new RoleUpdateEvent();

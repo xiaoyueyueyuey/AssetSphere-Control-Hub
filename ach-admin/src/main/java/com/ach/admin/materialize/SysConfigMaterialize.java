@@ -24,6 +24,7 @@ public class SysConfigMaterialize implements DomainEventListener {
         SysConfigEntity sysConfigEntity = new SysConfigEntity();
         sysConfigEntity.setConfigId(event.getConfigId());
         sysConfigEntity.setConfigValue(event.getConfigValue());
+        System.out.println("sysConfigEntity" + sysConfigEntity);
         sysConfigMapper.updateById(sysConfigEntity);
     }
 }

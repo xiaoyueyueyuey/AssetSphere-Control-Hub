@@ -56,7 +56,11 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public Boolean deleteBatchByIds(List<Long> ids) {
 
-        return sysUserAggMapper.deleteBatchIds(ids) > 0;
+        for (Long id : ids) {
+            sysUserAggMapper.delete(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getUserId, id));
+        }
+        return true;
+//        return sysUserAggMapper.deleteBatchIds(ids) > 0;
     }
 
     @Override
@@ -77,7 +81,8 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public Boolean checkEmailIsUnique(String email, Long excludeUserId) {
-        return !sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>().eq(SysUserAggEntity::getEmail, email).ne(SysUserAggEntity::getUserId, excludeUserId));
+        return !sysUserAggMapper.exists(new LambdaQueryWrapper<SysUserAggEntity>()
+                .eq(SysUserAggEntity::getEmail, email).ne(SysUserAggEntity::getUserId, excludeUserId));
     }
 
     @Override
@@ -95,18 +100,15 @@ public class UserRepositoryImpl implements UserRepository {
     public Boolean checkDeptIsExist(Long deptId) {
         return sysDeptAggMapper.exists(new LambdaQueryWrapper<SysDeptAggEntity>().eq(SysDeptAggEntity::getDeptId, deptId));
     }
-
     @Override
     public Boolean checkRoleIsExist(Long roleId) {
         //TODO 到时要改成角色聚合根
         return sysRoleMapper.exists(new LambdaQueryWrapper<SysRoleEntity>().eq(SysRoleEntity::getRoleId, roleId));
     }
-
     @Override
     public Boolean checkPostIsExist(Long postId) {
         return sysPostAggMapper.exists(new LambdaQueryWrapper<SysPostAggEntity>().eq(SysPostAggEntity::getPostId, postId));
     }
-
     @Override
     public String getPasswordByUserId(Long userId) {
         return sysUserAggMapper.getPasswordByUserId(userId);

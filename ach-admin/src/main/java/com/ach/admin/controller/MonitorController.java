@@ -48,7 +48,6 @@ public class MonitorController extends BaseController {
         ServerInfo serverInfo = monitorServiceImpl.getServerInfo();
         return BaseResponseData.ok(serverInfo);
     }
-
     /**
      * 获取在线用户列表
      *

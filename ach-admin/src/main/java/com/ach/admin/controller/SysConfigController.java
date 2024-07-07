@@ -58,7 +58,7 @@ public class SysConfigController extends BaseController {
     @PreAuthorize("@permission.has('system:config:query')")
     @GetMapping(value = "/config/{configId}")
     @Operation(summary = "配置信息", description = "配置的详细信息")
-    public BaseResponseData<ConfigDTO> getInfo(@NotNull @Positive @PathVariable Integer configId) {
+    public BaseResponseData<ConfigDTO> getInfo(@NotNull @Positive @PathVariable("configId") Integer configId) {
         ConfigDTO config = sysConfigService.getConfigInfo(configId);
         return BaseResponseData.ok(config);
     }
@@ -70,7 +70,7 @@ public class SysConfigController extends BaseController {
     @AccessLog(title = "参数管理", businessType = BusinessTypeEnum.MODIFY)
     @Operation(summary = "配置修改", description = "配置修改")
     @PutMapping(value = "/config/{configId}")
-    public BaseResponseData<Void> edit(@NotNull @Positive @PathVariable Integer configId, @RequestBody UpdateConfigCommand command) {
+    public BaseResponseData<Void> edit(@NotNull @Positive @PathVariable("configId") Integer configId, @RequestBody UpdateConfigCommand command) {
         command.setConfigId(configId);
         Boolean execute = commandInvoker.execute(updateConfigCommandHandler, command);
         if (!execute) {

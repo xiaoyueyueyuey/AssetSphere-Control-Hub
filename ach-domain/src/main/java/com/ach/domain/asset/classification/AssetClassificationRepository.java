@@ -1,6 +1,6 @@
 package com.ach.domain.asset.classification;
 
-import com.ach.domain.common.Repository;
+import com.ach.domain.Repository;
 
 public interface AssetClassificationRepository extends Repository<AssetClassificationModel> {
 

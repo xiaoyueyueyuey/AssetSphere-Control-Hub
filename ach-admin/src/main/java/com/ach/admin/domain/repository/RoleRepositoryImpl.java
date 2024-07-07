@@ -33,6 +33,7 @@ public class RoleRepositoryImpl implements RoleRepository {
     @Override
     public Long save(RoleModel model) {
         SysRoleAggEntity sysRoleAggEntity = new SysRoleAggEntity();
+        BeanUtils.copyProperties(model, sysRoleAggEntity);
         if (model.getRoleId() != null) {
             int i = sysRoleAggMapper.updateById(sysRoleAggEntity);
             return (long) i;
@@ -52,21 +53,21 @@ public class RoleRepositoryImpl implements RoleRepository {
 
     @Override
     public Boolean checkRoleNameIsUnique(String roleName) {
-        return sysRoleAggMapper.exists(new LambdaQueryWrapper<SysRoleAggEntity>().eq(SysRoleAggEntity::getRoleName, roleName));
+        return !sysRoleAggMapper.exists(new LambdaQueryWrapper<SysRoleAggEntity>().eq(SysRoleAggEntity::getRoleName, roleName));
     }
 
     @Override
     public Boolean checkRoleKeyIsUnique(String roleKey) {
-        return sysRoleAggMapper.exists(new LambdaQueryWrapper<SysRoleAggEntity>().eq(SysRoleAggEntity::getRoleKey, roleKey));
+        return !sysRoleAggMapper.exists(new LambdaQueryWrapper<SysRoleAggEntity>().eq(SysRoleAggEntity::getRoleKey, roleKey));
     }
 
     @Override
     public Boolean checkRoleNameIsUnique(String roleName, Long excludeRoleId) {
-        return sysRoleAggMapper.exists(new LambdaQueryWrapper<SysRoleAggEntity>().eq(SysRoleAggEntity::getRoleName, roleName).ne(SysRoleAggEntity::getRoleId, excludeRoleId));
+        return !sysRoleAggMapper.exists(new LambdaQueryWrapper<SysRoleAggEntity>().eq(SysRoleAggEntity::getRoleName, roleName).ne(SysRoleAggEntity::getRoleId, excludeRoleId));
     }
 
     @Override
     public Boolean checkRoleKeyIsUnique(String roleKey, Long excludeRoleId) {
-        return sysRoleAggMapper.exists(new LambdaQueryWrapper<SysRoleAggEntity>().eq(SysRoleAggEntity::getRoleKey, roleKey).ne(SysRoleAggEntity::getRoleId, excludeRoleId));
+        return !sysRoleAggMapper.exists(new LambdaQueryWrapper<SysRoleAggEntity>().eq(SysRoleAggEntity::getRoleKey, roleKey).ne(SysRoleAggEntity::getRoleId, excludeRoleId));
     }
 }

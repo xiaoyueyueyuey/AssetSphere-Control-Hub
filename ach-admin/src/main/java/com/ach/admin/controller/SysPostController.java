@@ -2,13 +2,13 @@ package com.ach.admin.controller;
 
 
 import com.ach.admin.customize.aop.accessLog.AccessLog;
-import com.ach.domain.CommandInvoker;
 import com.ach.admin.dto.post.PostDTO;
 import com.ach.admin.entity.SysPostEntity;
 import com.ach.admin.query.PostQuery;
 import com.ach.admin.service.SysPostService;
 import com.ach.common.base.BaseResponseData;
 import com.ach.common.enums.common.BusinessTypeEnum;
+import com.ach.domain.CommandInvoker;
 import com.ach.domain.system.post.command.AddPostCommand;
 import com.ach.domain.system.post.command.DeletePostCommand;
 import com.ach.domain.system.post.command.UpdatePostCommand;
@@ -130,9 +130,6 @@ public class SysPostController extends BaseController {
     @PutMapping
     public BaseResponseData<Void> edit(@RequestBody UpdatePostCommand updateCommand) {
         Boolean execute = commandInvoker.execute(updatePostCommandHandler, updateCommand);
-        if (!execute) {
-            return BaseResponseData.fail();
-        }
         return BaseResponseData.ok();
     }
 

@@ -1,7 +1,6 @@
 package com.ach.domain.system.user.handler.manager;
 
 
-import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
 import com.ach.domain.CommandHandler;
 import com.ach.domain.EventQueue;
@@ -19,7 +18,6 @@ public class UpdateUserCommandHandler implements CommandHandler<UpdateUserComman
 
     @Override
     public Boolean handle(EventQueue eventQueue, UpdateUserCommand command) {
-
         UserModel userModel = userRepository.findByIdOrError(command.getUserId());
         if (userModel.getUserId() == null) {
             //用户不存在，直接执行即可，聚合会抛出异常
@@ -34,20 +32,42 @@ public class UpdateUserCommandHandler implements CommandHandler<UpdateUserComman
             userModel.setUserNameIsUnique(false);
         }
         //邮箱是否唯一,如果邮箱没有变化，不需要判断是否唯一
-        if (!StrUtil.isEmptyIfStr(command.getEmail())) {
-            if (userModel.getEmail() != null && (userModel.getEmail().equals(command.getEmail()) || userRepository.checkEmailIsUnique(command.getEmail(), command.getUserId()))) {
-                userModel.setEmail(command.getEmail());
-                userModel.setEmailIsUnique(true);
+        if (userModel.getEmail() == null) {//如果之前邮箱为空
+            //如果命令里有邮箱
+            if (!StrUtil.isEmptyIfStr(command.getEmail())) {
+                if (userRepository.checkEmailIsUnique(command.getEmail(), command.getUserId())) {
+                    userModel.setEmail(command.getEmail());
+                    userModel.setEmailIsUnique(true);
+                } else {
+                    userModel.setEmail(command.getEmail());
+                    userModel.setEmailIsUnique(false);
+                }
             } else {
-                userModel.setEmail(command.getEmail());
-                userModel.setEmailIsUnique(false);
+                userModel.setEmailIsUnique(true);
             }
         } else {
-            userModel.setEmailIsUnique(true);
+            //如果之前邮箱不为空
+            if (StrUtil.isEmptyIfStr(command.getEmail())) {
+                userModel.setEmailIsUnique(true);
+            } else {
+                if (userModel.getEmail().equals(command.getEmail())) {
+                    userModel.setEmail(command.getEmail());
+                    userModel.setEmailIsUnique(true);
+                } else {
+                    if (userRepository.checkEmailIsUnique(command.getEmail(), command.getUserId())) {
+                        userModel.setEmail(command.getEmail());
+                        userModel.setEmailIsUnique(true);
+                    } else {
+                        userModel.setEmail(command.getEmail());
+                        userModel.setEmailIsUnique(false);
+                    }
+
+                }
+            }
         }
 //        //电话号码是否唯一
         if (!StrUtil.isEmptyIfStr(command.getPhoneNumber())) {
-            if (userModel.getPhoneNumber() != null && (userModel.getPhoneNumber().equals(command.getPhoneNumber()) || userRepository.checkPhoneNumberIsUnique(command.getPhoneNumber(), command.getUserId()))) {
+            if (userRepository.checkPhoneNumberIsUnique(command.getPhoneNumber(), command.getUserId())) {
                 userModel.setPhoneNumber(command.getPhoneNumber());
                 userModel.setPhoneNumberIsUnique(true);
             } else {
@@ -58,35 +78,38 @@ public class UpdateUserCommandHandler implements CommandHandler<UpdateUserComman
             userModel.setPhoneNumberIsUnique(true);
         }
         //部门是否唯一
-        if (ObjectUtil.isNotNull(command.getDeptId())) {
-            if (userRepository.checkDeptIsExist(command.getDeptId())) {
-                userModel.setDeptIsExist(true);
-            } else {
-                userModel.setDeptIsExist(false);
-            }
-        } else {
-            userModel.setDeptIsExist(true);
-        }
+//        if (ObjectUtil.isNotNull(command.getDeptId())) {
+//            if (userRepository.checkDeptIsExist(command.getDeptId())) {
+//                userModel.setDeptIsExist(true);
+//            } else {
+//                userModel.setDeptIsExist(false);
+//            }
+//        } else {
+//            userModel.setDeptIsExist(true);
+//        }
+        userModel.setDeptIsExist(true);
         //角色是否唯一
-        if (ObjectUtil.isNotNull(command.getRoleId())) {
-            if (userRepository.checkRoleIsExist(command.getRoleId())) {
-                userModel.setRoleIsExist(true);
-            } else {
-                userModel.setRoleIsExist(false);
-            }
-        } else {
-            userModel.setRoleIsExist(true);
-        }
-        //职位是否唯一
-        if (ObjectUtil.isNotNull(command.getPostId())) {
-            if (userRepository.checkPostIsExist(command.getPostId())) {
-                userModel.setPostIsExist(true);
-            } else {
-                userModel.setPostIsExist(false);
-            }
-        } else {
-            userModel.setPostIsExist(true);
-        }
+//        if (ObjectUtil.isNotNull(command.getRoleId())) {
+//            if (userRepository.checkRoleIsExist(command.getRoleId())) {
+//                userModel.setRoleIsExist(true);
+//            } else {
+//                userModel.setRoleIsExist(false);
+//            }
+//        } else {
+//            userModel.setRoleIsExist(true);
+//        }
+        userModel.setRoleIsExist(true);
+        //职位是否存在,这里简化了，直接设置为存在
+        userModel.setPostIsExist(true);
+//        if (ObjectUtil.isNotNull(command.getPostId())) {
+//            if (userRepository.checkPostIsExist(command.getPostId())) {
+//                userModel.setPostIsExist(true);
+//            } else {
+//                userModel.setPostIsExist(false);
+//            }
+//        } else {
+//            userModel.setPostIsExist(true);
+//        }
         userModel.setUserId(command.getUserId());
         Boolean handle = userModel.handle(eventQueue, command);
         if (handle) {

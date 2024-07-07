@@ -12,4 +12,9 @@ public class PostAddEvent implements DomainEvent {
     private Integer postSort;
     private String remark;
     private Integer status;
+
+    @Override
+    public void setAggregateId(Long aggregateId) {
+        this.postId = aggregateId;
+    }
 }

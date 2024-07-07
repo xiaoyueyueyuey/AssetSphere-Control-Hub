@@ -53,10 +53,12 @@ public class LoginServiceImpl implements LoginService {
             ));
             throw new ApiException(e, ErrorCode.Business.LOGIN_WRONG_USER_PASSWORD);
         } catch (AuthenticationException e) {
-            ThreadPoolManager.execute(AsyncTaskFactory.loginInfoTask(username, LoginStatusEnum.LOGIN_FAIL, e.getMessage()));
+            ThreadPoolManager.execute(AsyncTaskFactory.loginInfoTask(username, LoginStatusEnum.LOGIN_FAIL
+                    , e.getMessage()));
             throw new ApiException(e, ErrorCode.Business.LOGIN_ERROR, e.getMessage());
         } catch (Exception e) {
-            ThreadPoolManager.execute(AsyncTaskFactory.loginInfoTask(username, LoginStatusEnum.LOGIN_FAIL, e.getMessage()));
+            ThreadPoolManager.execute(AsyncTaskFactory.loginInfoTask(username, LoginStatusEnum.LOGIN_FAIL
+                    , e.getMessage()));
             throw new ApiException(e, ErrorCode.Business.LOGIN_ERROR, e.getMessage());
         }
         // 把当前登录用户 放入上下文中

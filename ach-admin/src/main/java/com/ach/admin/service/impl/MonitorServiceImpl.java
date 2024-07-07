@@ -76,20 +76,21 @@ public class MonitorServiceImpl {
     public List<OnlineUserDTO> getOnlineUserList(String username, String ipAddress) {
         // 获取所有在线用户的缓存键
         Collection<String> keys = redisTemplate.keys(CacheKeyEnum.LOGIN_USER_KEY.key() + "*");
-
         // 构建在线用户流
         Stream<OnlineUserDTO> onlineUserStream = keys.stream().map(key ->
                         CacheCenter.loginUserCache.getObjectOnlyInCacheByKey(key))
                 .filter(Objects::nonNull).map(OnlineUserDTO::new);
 
         // 根据用户名和IP地址进行过滤
-        List<OnlineUserDTO> filteredOnlineUsers = onlineUserStream
-                .filter(user ->
-                        StrUtil.isEmpty(username) || username.equals(user.getUsername())
-                ).filter(user ->
-                        StrUtil.isEmpty(ipAddress) || ipAddress.equals(user.getIpAddress())
-                ).collect(Collectors.toList());
-
+//        List<OnlineUserDTO> filteredOnlineUsers = onlineUserStream
+//                .filter(user ->
+//                         username.equals(user.getUsername())
+////                        StrUtil.isEmpty(username) || username.equals(user.getUsername())
+//                ).filter(user ->
+////                        StrUtil.isEmpty(ipAddress) || ipAddress.equals(user.getIpAddress())
+//                        StrUtil.isEmpty(ipAddress) || ipAddress.equals(user.getIpAddress())
+//                ).collect(Collectors.toList());
+        List<OnlineUserDTO> filteredOnlineUsers = onlineUserStream.collect(Collectors.toList());
         // 反转列表，使最近登录的用户在前面
         Collections.reverse(filteredOnlineUsers);
         return filteredOnlineUsers;
